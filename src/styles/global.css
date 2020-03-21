@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Neuton:400i|Noto+Sans&display=swap');
+
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -1px;
+}
+
+h3 , h4, h5, h6 {
+    font-family: 'Neuton', serif;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
