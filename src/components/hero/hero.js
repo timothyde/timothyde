@@ -5,6 +5,10 @@ import Button from '../button/button'
 
 let Hero = styled.div`
   height: 100vh;
+
+  @media (max-width: 768px) {
+    padding: 0 0.375rem;
+  }
 `
 
 let Container = styled.div`
@@ -40,12 +44,17 @@ let Text = styled.div`
     padding: 20px 0px 10px 0px;
     letter-spacing: -2px;
 
-    line-height: 60px;
-    font-size: 60px;
+    line-height: 35px;
+    font-size: 35px;
 
-    @media (min-width: 960px) {
-      font-size: 120px;
-      line-height: 110px;
+    @media (min-width: 768px) {
+      line-height: 45px;
+      font-size: 50px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 60px;
+      line-height: 60px;
     }
   }
 

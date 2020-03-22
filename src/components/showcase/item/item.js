@@ -6,20 +6,28 @@ const Wrapper = styled.div`
   margin-bottom: 40px;
 
   height: 632px;
-  width: 50%;
+  width: 100%;
 
   transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
 
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+
   :nth-child(even) {
-    margin-top: -80px;
+    @media (min-width: 768px) {
+      margin-top: -80px;
+    }
   }
 
   :nth-child(3) {
-    order: 4;
-    margin-top: -80px;
+    @media (min-width: 768px) {
+      order: 4;
+      margin-top: -80px;
+    }
   }
 
   &&:hover {

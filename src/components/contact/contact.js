@@ -42,10 +42,16 @@ let Title = styled.div`
     width: 100%;
 
     text-align: center;
-    line-height: 90px;
-    font-size: 120px;
 
-    @media (max-width: 1199px) {
+    line-height: 45px;
+    font-size: 60px;
+
+    @media (min-width: 768px) {
+      font-size: 80px;
+      line-height: 70px;
+    }
+
+    @media (min-width: 960px) {
       font-size: 120px;
       line-height: 110px;
     }
@@ -88,14 +94,14 @@ export default () => (
     <Container>
       <Title>
         <h1>
-          Con
+          Con-
           <br />
-          -tact
+          tact
         </h1>
       </Title>
       <Text>
         <h2>
-          <span>Wanna connect?</span> Awesome!
+          <span>Want to connect?</span> Awesome!
         </h2>
         <Button title="Email me!" />
         <p>

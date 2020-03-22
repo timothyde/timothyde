@@ -44,10 +44,15 @@ let Title = styled.div`
     width: 100%;
 
     text-align: center;
-    line-height: 90px;
-    font-size: 120px;
+    line-height: 45px;
+    font-size: 60px;
 
-    @media (max-width: 1199px) {
+    @media (min-width: 768px) {
+      font-size: 80px;
+      line-height: 70px;
+    }
+
+    @media (min-width: 960px) {
       font-size: 120px;
       line-height: 110px;
     }
@@ -57,7 +62,7 @@ let Title = styled.div`
 let Text = styled.div`
   margin-top: 4rem;
   padding: 1rem;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 3rem;
@@ -79,6 +84,10 @@ let Text = styled.div`
     transition: all 0.3s ease;
     box-sizing: border-box;
   }
+
+  @media (min-width: 768px) {
+    width: 60%;
+  }
 `
 
 const Signature = styled.img`
@@ -90,12 +99,17 @@ const Signature = styled.img`
 
 const Vita = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `
 
 const VitaText = styled.div`
-  margin-top: 4rem;
   padding: 0 1rem;
-  width: 50%;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    margin-top: 4rem;
+    width: 50%;
+  }
 `
 
 const VitaItems = styled.div`
@@ -104,7 +118,11 @@ const VitaItems = styled.div`
   align-items: flex-start;
 
   padding: 2rem 2rem;
-  width: 50%;
+  width: 100%;
+
+  /* @media (min-width: 768px) {
+    width: 50%;
+  } */
 `
 
 export default () => (

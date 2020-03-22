@@ -6,6 +6,10 @@ import Item from './item/item'
 
 let Showcase = styled.div`
   position: relative;
+
+  @media (max-width: 768px) {
+    padding: 0 0.375rem;
+  }
 `
 
 let Container = styled.div`
@@ -31,15 +35,18 @@ let Title = styled.div`
     -webkit-background-clip: text;
     background-clip: text;
     margin-bottom: 20px;
-    text-indent: -3px;
-    margin-left: -6px;
     padding: 20px 0px 10px 0px;
     letter-spacing: -2px;
 
-    line-height: 90px;
-    font-size: 120px;
+    line-height: 45px;
+    font-size: 60px;
 
-    @media (max-width: 1199px) {
+    @media (min-width: 768px) {
+      font-size: 80px;
+      line-height: 70px;
+    }
+
+    @media (min-width: 960px) {
       font-size: 120px;
       line-height: 110px;
     }
@@ -76,9 +83,8 @@ let Title = styled.div`
 
   width: 100%;
 
-  margin-bottom: 50px;
-
   @media (min-width: 768px) {
+    margin-bottom: 3rem;
     width: 50%;
   }
 
@@ -95,9 +101,17 @@ let ItemContainer = styled.div`
 `
 
 let Text = styled.div`
-  margin-top: 4rem;
   padding: 1rem;
-  width: 50%;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 4rem;
+    width: 50%;
+  }
 `
 
 export default () => (

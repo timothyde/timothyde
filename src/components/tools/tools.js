@@ -7,6 +7,11 @@ let Tools = styled.div`
   position: relative;
   padding-top: 4rem;
   background: #092545;
+
+  @media (max-width: 768px) {
+    padding: 0 0.375rem;
+    padding-top: 4rem;
+  }
 `
 
 let Container = styled.div`
@@ -37,10 +42,15 @@ let Title = styled.div`
     padding: 20px 0px 10px 0px;
     letter-spacing: -2px;
 
-    line-height: 90px;
-    font-size: 120px;
+    line-height: 45px;
+    font-size: 60px;
 
-    @media (max-width: 1199px) {
+    @media (min-width: 768px) {
+      font-size: 80px;
+      line-height: 70px;
+    }
+
+    @media (min-width: 960px) {
       font-size: 120px;
       line-height: 110px;
     }
