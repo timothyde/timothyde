@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import signature from '../../images/signature.svg'
+
 let Header = styled.header`
   position: fixed;
   top: 0px;
@@ -10,7 +12,7 @@ let Header = styled.header`
   background: none;
   overflow: hidden;
   background: #fff;
-  padding: 45px 0px 25px;
+  padding: 25px 0px 25px;
   transition: all ease 0.5s;
 `
 
@@ -19,6 +21,9 @@ let Container = styled.div`
   margin-left: auto;
   padding-left: 10px;
   padding-right: 10px;
+
+  display: flex;
+  align-items: center;
 
   @media (min-width: 768px) {
     width: 740px;
@@ -29,11 +34,14 @@ let Container = styled.div`
   }
 `
 
-let Logo = styled.a`
-  font-size: 22px;
-  color: #c8d6df;
+let Logo = styled.img`
+  /* font-size: 22px;
+  color: #c8d6df; */
   display: inline-block;
-  margin-right: 30px;
+  margin: 0;
+  margin-right: 1rem;
+  padding: 0;
+  width: 60px;
 `
 
 let Nav = styled.nav`
@@ -48,7 +56,7 @@ let Nav = styled.nav`
 export default () => (
   <Header>
     <Container>
-      <Logo href="/">Ty.</Logo>
+      <Logo src={signature} />
       <Nav>
         <a href="/">Me</a>
         <a href="/">Bio</a>
