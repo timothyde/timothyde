@@ -5,8 +5,8 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 import Header from './header'
-import './layout.css'
-import '../styles/global.css'
+import '../../styles/layout.css'
+import '../../styles/global.css'
 
 const Footer = styled.footer`
   background: #092545;
@@ -19,6 +19,10 @@ const Container = styled.div`
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
+
+  p {
+    margin: 0;
+  }
 `
 
 const Layout = ({ children }) => {
@@ -35,23 +39,15 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 1200,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <Footer>
-          <Container>
-            <p>
-              © {new Date().getFullYear()}, Timothy Krechel |{' '}
-              <Link to="/">Imprint</Link>
-            </p>
-          </Container>
-        </Footer>
-      </div>
+      <main>{children}</main>
+      <Footer>
+        <Container>
+          <p>
+            © {new Date().getFullYear()}, Timothy Krechel |{' '}
+            <Link to="/">Imprint</Link>
+          </p>
+        </Container>
+      </Footer>
     </>
   )
 }

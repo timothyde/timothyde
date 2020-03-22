@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Button from '../button/button'
 import Item from './item/item'
 
 let Showcase = styled.div`
@@ -97,19 +98,6 @@ let Text = styled.div`
   margin-top: 4rem;
   padding: 1rem;
   width: 50%;
-`
-
-let Button = styled.button`
-  background-color: #2d6ae3;
-  border: none;
-  color: #fff;
-  font-family: 'Noto Sans', sans-serif;
-  padding: 5px 10px 5px 25px;
-  text-decoration: none;
-  text-align: left;
-
-  height: 64px;
-  width: 240px;
 `
 
 export default () => (

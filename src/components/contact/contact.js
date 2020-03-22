@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Button from '../button/button'
+
 let Contact = styled.div`
   position: relative;
   margin: 4rem 0;
@@ -58,6 +60,10 @@ let Text = styled.div`
   text-align: center;
   margin-bottom: 3rem;
 
+  p {
+    margin-top: 2rem;
+  }
+
   p > a {
     color: #2d6ae3;
     position: relative;
@@ -89,13 +95,9 @@ export default () => (
       </Title>
       <Text>
         <h2>
-          <span>Wanna connect?</span>
-          <br />
-          Awesome!{' '}
-          <span>
-            Just <a href="mailto:hello@timothy.de">send me an email</a>.
-          </span>
+          <span>Wanna connect?</span> Awesome!
         </h2>
+        <Button>Email me!</Button>
         <p>
           Or... you can add me on <a href="mailto:hello@timothy.de">LinkedIn</a>{' '}
           or <a href="mailto:hello@timothy.de">Twitter</a>. Cheers!

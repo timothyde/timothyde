@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Button from '../button/button'
+
 let Hero = styled.div`
   height: 100vh;
 `
@@ -67,19 +69,6 @@ let Text = styled.div`
   @media (min-width: 1200px) {
     width: 60%;
   }
-`
-
-let Button = styled.button`
-  background-color: #2d6ae3;
-  border: none;
-  color: #fff;
-  font-family: 'Noto Sans', sans-serif;
-  padding: 5px 10px 5px 25px;
-  text-decoration: none;
-  text-align: left;
-
-  height: 64px;
-  width: 240px;
 `
 
 export default () => (

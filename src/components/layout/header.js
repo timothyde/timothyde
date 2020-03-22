@@ -41,6 +41,7 @@ let Nav = styled.nav`
 
   a {
     margin: 0 1rem;
+    color: #092545;
   }
 `
 
