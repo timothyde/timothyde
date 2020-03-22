@@ -87,7 +87,7 @@ export default () => (
           <a href="https://tarent.de">@tarent</a>. Have a fun project to collab
           on? Awesome, <a href="mailto:hello@timothy.de">hit me up</a>!
         </p>
-        <Button>Scroll down</Button>
+        <Button title="Scroll down" />
       </Text>
     </Container>
   </Hero>

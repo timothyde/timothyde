@@ -121,7 +121,7 @@ export default () => (
             projects - covering print design, both 2D and 3D animation, web
             development as well as native app development.
           </p>
-          <Button>Full list</Button>
+          <Button title="Full list" />
         </Text>
       </ItemContainer>
     </Container>

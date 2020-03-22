@@ -97,7 +97,7 @@ export default () => (
         <h2>
           <span>Wanna connect?</span> Awesome!
         </h2>
-        <Button>Email me!</Button>
+        <Button title="Email me!" />
         <p>
           Or... you can add me on <a href="mailto:hello@timothy.de">LinkedIn</a>{' '}
           or <a href="mailto:hello@timothy.de">Twitter</a>. Cheers!

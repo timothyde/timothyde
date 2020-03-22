@@ -50,6 +50,32 @@ let Nav = styled.nav`
   a {
     margin: 0 1rem;
     color: #092545;
+    position: relative;
+    cursor: pointer;
+    letter-spacing: -0.6px;
+    font-size: 14px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: calc(50% - -9px);
+      left: 0;
+      width: 100%;
+      height: 2px;
+      pointer-events: none;
+      background: #2d6ae3;
+      transform: scale3d(0, 1, 1);
+      transform-origin: 100% 50%;
+      transition: transform 0.5s;
+      transition-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+    }
+
+    &:hover {
+      &:before {
+        transform: scale3d(1, 1, 1);
+        transform-origin: 0% 50%;
+      }
+    }
   }
 `
 

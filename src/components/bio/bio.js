@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 import Item from './vita/item'
 
+import signature from '../../images/signature.svg'
+
 let Bio = styled.div`
   position: relative;
   margin-bottom: 3rem;
@@ -79,6 +81,13 @@ let Text = styled.div`
   }
 `
 
+const Signature = styled.img`
+  margin-top: -30px;
+
+  text-align: right;
+  width: 100px;
+`
+
 const Vita = styled.div`
   display: flex;
 `
@@ -124,6 +133,8 @@ export default () => (
           ullamco. Adipisicing qui ad velit ullamco ipsum. Elit est aliqua ex
           sunt laborum.
         </p>
+        <h2>Love,</h2>
+        <Signature src={signature} />
       </Text>
       <Vita>
         <VitaText>
