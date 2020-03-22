@@ -43,7 +43,7 @@ let Text = styled.div`
     line-height: 60px;
     font-size: 60px;
 
-    @media (max-width: 1199px) {
+    @media (min-width: 960px) {
       font-size: 120px;
       line-height: 110px;
     }
