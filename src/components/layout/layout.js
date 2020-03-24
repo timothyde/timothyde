@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
         <Container>
           <p>
             © {new Date().getFullYear()}, Timothy Krechel |{' '}
-            <Link to="/">Imprint</Link>
+            <Link to="/imprint/">Imprint</Link>
           </p>
         </Container>
       </Footer>

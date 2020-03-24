@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 import signature from '../../images/signature.svg'
 
@@ -12,16 +13,10 @@ let Logo = styled.img`
   cursor: pointer;
 `
 
-export default ({ itemName }) => {
-  const handleClick = event => {
-    event.preventDefault()
-
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
+export default () => {
   return (
-    <a href="#" onClick={handleClick} ariaLabel={`Scroll to ${itemName}`}>
+    <Link to="/">
       <Logo src={signature} />
-    </a>
+    </Link>
   )
 }

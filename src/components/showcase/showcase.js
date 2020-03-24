@@ -135,7 +135,7 @@ export default () => (
             projects - covering print design, both 2D and 3D animation, web
             development as well as native app development.
           </p>
-          <LinkButton to="/" title="Full list" />
+          {/* <LinkButton to="/showcase/" title="Full list" /> */}
         </Text>
       </ItemContainer>
     </Container>

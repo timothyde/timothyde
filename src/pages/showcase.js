@@ -2,13 +2,13 @@ import React from 'react'
 
 import Layout from '../components/layout/layout'
 import SEO from '../components/seo'
-import Error from '../components/404/404'
+import Showcase from '../components/showcase/showcase'
 import Contact from '../components/contact/contact'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Error />
+    <Showcase />
     <Contact />
   </Layout>
 )
