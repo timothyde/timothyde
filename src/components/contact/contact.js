@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Button from '../button/button'
+import { LinkButton } from '../button/button'
 
 let Contact = styled.div`
   position: relative;
@@ -103,7 +103,7 @@ export default () => (
         <h2>
           <span>Want to connect?</span> Awesome!
         </h2>
-        <Button title="Email me!" />
+        <LinkButton href="mailto:hello@timothy.de" title="Email me!" />
         <p>
           Or... you can add me on <a href="mailto:hello@timothy.de">LinkedIn</a>{' '}
           or <a href="mailto:hello@timothy.de">Twitter</a>. Cheers!

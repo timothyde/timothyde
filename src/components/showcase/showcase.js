@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Button from '../button/button'
+import { LinkButton } from '../button/button'
 import Item from './item/item'
 
 let Showcase = styled.div`
@@ -135,7 +135,7 @@ export default () => (
             projects - covering print design, both 2D and 3D animation, web
             development as well as native app development.
           </p>
-          <Button title="Full list" />
+          <LinkButton to="/" title="Full list" />
         </Text>
       </ItemContainer>
     </Container>
