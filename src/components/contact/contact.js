@@ -90,7 +90,7 @@ let Text = styled.div`
 `
 
 export default () => (
-  <Contact>
+  <Contact id="contact">
     <Container>
       <Title>
         <h1>

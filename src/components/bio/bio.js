@@ -126,7 +126,7 @@ const VitaItems = styled.div`
 `
 
 export default () => (
-  <Bio>
+  <Bio id="bio">
     <Container>
       <Title>
         <h1>

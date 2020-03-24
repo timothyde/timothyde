@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Burger from '../button/burger'
+import NavItem from '../nav/item'
 
 import signature from '../../images/signature.svg'
 
@@ -51,37 +52,6 @@ let Nav = styled.nav`
 
   @media (min-width: 576px) {
     display: inline-block;
-  }
-
-  a {
-    margin: 0 1rem;
-    color: #092545;
-    position: relative;
-    cursor: pointer;
-    letter-spacing: -0.6px;
-    font-size: 14px;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: calc(50% - -9px);
-      left: 0;
-      width: 100%;
-      height: 2px;
-      pointer-events: none;
-      background: #2d6ae3;
-      transform: scale3d(0, 1, 1);
-      transform-origin: 100% 50%;
-      transition: transform 0.5s;
-      transition-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
-    }
-
-    &:hover {
-      &:before {
-        transform: scale3d(1, 1, 1);
-        transform-origin: 0% 50%;
-      }
-    }
   }
 `
 
@@ -159,22 +129,21 @@ export default class Header extends React.Component {
   render() {
     return (
       <Head>
-        <Overlay className={this.state.open ? `open` : ``} />
+        {/* <Overlay className={this.state.open ? `open` : ``} />
         <MobileNav className={this.state.open ? `open` : ``}>
           <a href="/">Me</a>
           <a href="/">Bio</a>
           <a href="/">Showcase</a>
           <a href="/">Tools</a>
           <a href="/">Contact</a>
-        </MobileNav>
+        </MobileNav> */}
         <Container>
           <Logo src={signature} />
           <Nav>
-            <a href="/">Me</a>
-            <a href="/">Bio</a>
-            <a href="/">Showcase</a>
-            <a href="/">Tools</a>
-            <a href="/">Contact</a>
+            <NavItem itemName={`bio`}>Bio</NavItem>
+            <NavItem itemName={`showcase`}>Showcase</NavItem>
+            <NavItem itemName={`tools`}>Tools</NavItem>
+            <NavItem itemName={`contact`}>Contact</NavItem>
           </Nav>
           <Burger open={this.state.open} handler={this.changeOpen.bind(this)} />
         </Container>

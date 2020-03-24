@@ -115,7 +115,7 @@ let Text = styled.div`
 `
 
 export default () => (
-  <Showcase>
+  <Showcase id="showcase">
     <Container>
       <Title>
         <h1>

@@ -103,7 +103,7 @@ let ItemContainer = styled.div`
 `
 
 export default () => (
-  <Tools>
+  <Tools id="tools">
     <Container>
       <Title>
         <h1>
