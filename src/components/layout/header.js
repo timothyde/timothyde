@@ -3,8 +3,7 @@ import styled from 'styled-components'
 
 import Burger from '../button/burger'
 import NavItem from '../nav/item'
-
-import signature from '../../images/signature.svg'
+import Logo from '../nav/logo'
 
 let Head = styled.header`
   position: fixed;
@@ -35,16 +34,6 @@ let Container = styled.div`
   @media (min-width: 992px) {
     width: 960px;
   }
-`
-
-let Logo = styled.img`
-  /* font-size: 22px;
-  color: #c8d6df; */
-  display: inline-block;
-  margin: 0;
-  margin-right: 1rem;
-  padding: 0;
-  width: 60px;
 `
 
 let Nav = styled.nav`
@@ -138,7 +127,7 @@ export default class Header extends React.Component {
           <a href="/">Contact</a>
         </MobileNav> */}
         <Container>
-          <Logo src={signature} />
+          <Logo />
           <Nav>
             <NavItem itemName={`bio`}>Bio</NavItem>
             <NavItem itemName={`showcase`}>Showcase</NavItem>
