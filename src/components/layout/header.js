@@ -15,6 +15,12 @@ let Head = styled.header`
   overflow: hidden;
   padding: 25px 0px 25px;
   transition: all ease 0.5s;
+
+  &.solid {
+    background: #fff;
+    max-height: 80px;
+    padding: 0;
+  }
 `
 
 let Container = styled.div`
@@ -118,9 +124,35 @@ export default class Header extends React.Component {
     this.setState({ open: !this.state.open })
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.getWindowHeight.bind(this))
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.getWindowHeight.bind(this))
+  }
+
+  //then create the method
+  getWindowHeight() {
+    const distanceY = window.pageYOffset || document.documentElement.scrollTop
+    const shrinkOn = 200
+
+    if (distanceY > shrinkOn) {
+      this.setState({
+        solid: true,
+      })
+    }
+
+    if (distanceY < shrinkOn) {
+      this.setState({
+        solid: false,
+      })
+    }
+  }
+
   render() {
     return (
-      <Head>
+      <Head className={this.state.solid ? 'solid' : ''}>
         {/* <Overlay className={this.state.open ? `open` : ``} />
         <MobileNav className={this.state.open ? `open` : ``}>
           <a href="/">Me</a>

@@ -14,8 +14,12 @@ let Hero = styled.div`
 
   @media (min-width: 768px) {
     background: url(${triangle});
-    background-position: top right;
+    background-position: top right -100px;
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: 1200px) {
+    background-position: top right;
   }
 `
 
