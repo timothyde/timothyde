@@ -2,12 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Button from '../button/button'
+import hero from '../../images/hero.png'
+import triangle from '../../images/triangle.svg'
 
 let Hero = styled.div`
-  height: 100vh;
+  min-height: 100vh;
 
   @media (max-width: 768px) {
     padding: 0 0.375rem;
+  }
+
+  @media (min-width: 768px) {
+    background: url(${triangle});
+    background-position: top right;
+    background-repeat: no-repeat;
   }
 `
 
@@ -16,19 +24,43 @@ let Container = styled.div`
   margin-left: auto;
   padding-left: 10px;
   padding-right: 10px;
-  height: 100%;
+  min-height: 100vh;
 
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
   @media (min-width: 768px) {
     width: 740px;
   }
 
   @media (min-width: 992px) {
-    width: 960px;
+    width: 900px;
+    min-height: 100vh;
   }
+
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
+`
+
+let ImageContainer = styled.div`
+  width: 40%;
+  flex-grow: 2;
+  min-height: 400px;
+  height: 100%;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 2rem;
+`
+
+let Image = styled.img`
+  height: auto;
+  width: 100%;
 `
 
 let Text = styled.div`
@@ -69,14 +101,21 @@ let Text = styled.div`
     letter-spacing: -0.3px;
   }
 
+  height: 80vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 4rem;
 
   @media (min-width: 768px) {
     width: 50%;
+    margin-top: 0;
   }
 
   @media (min-width: 1200px) {
     width: 60%;
+    height: 100vh;
   }
 `
 
@@ -98,6 +137,9 @@ export default () => (
         </p>
         <Button itemName="bio" title="Scroll down" />
       </Text>
+      <ImageContainer>
+        <Image src={hero} />
+      </ImageContainer>
     </Container>
   </Hero>
 )

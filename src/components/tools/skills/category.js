@@ -54,21 +54,17 @@ const Skills = styled.div`
   width: 100%;
 `
 
-export default () => (
+export default ({ title, subtitle, data }) => (
   <Wrapper>
     <Card>
       <Title>
-        <h1>Media Production</h1>
-        <p>Creating animations, recording music or designing print media.</p>
+        <h1>{title}</h1>
+        <p>{subtitle}</p>
       </Title>
       <Skills>
-        <Skill name={'Adobe CC'} percent={90} />
-        <Skill name={'Logix Pro X'} percent={80} />
-        <Skill name={'Logix Pro X'} percent={80} />
-        <Skill name={'Logix Pro X'} percent={80} />
-        <Skill name={'Logix Pro X'} percent={80} />
-        <Skill name={'Logix Pro X'} percent={80} />
-        <Skill name={'Logix Pro X'} percent={80} />
+        {data.map(({ name, value }) => (
+          <Skill name={name} percent={value * 100} />
+        ))}
       </Skills>
     </Card>
   </Wrapper>

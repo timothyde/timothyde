@@ -13,7 +13,6 @@ let Head = styled.header`
   width: 100%;
   background: none;
   overflow: hidden;
-  background: #fff;
   padding: 25px 0px 25px;
   transition: all ease 0.5s;
 `
@@ -33,6 +32,10 @@ let Container = styled.div`
 
   @media (min-width: 992px) {
     width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1200px;
   }
 `
 

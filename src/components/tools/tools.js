@@ -118,17 +118,145 @@ export default () => (
         </h2>
         <p>
           I've found that by leveraging the latest and greatest tooling you can
-          achieve a 10x boost of productivity. This applies even to learning new
-          stuff like languages. It's especially astonishing how communities like
-          open source push the boundaries of what's possible.
+          achieve a 10x boost of productivity. It's especially astonishing how
+          communities like open source push the boundaries of what's possible.
         </p>
-        <h2>Thank you, folks!</h2>
+        <h2>Thank you, folks, for such great products!</h2>
       </Title>
       <ItemContainer>
-        <Category />
-        <Category />
-        <Category />
+        <Category
+          title="Media Production"
+          subtitle="Creating animations, recording music or designing print media."
+          data={mediaData}
+        />
+        <Category
+          title="Tech"
+          subtitle="Developing Apps, Webpages and handling data"
+          data={techData}
+        />
+        <Category
+          title="Other"
+          subtitle="Office tools and languages"
+          data={otherData}
+        />
       </ItemContainer>
     </Container>
   </Tools>
 )
+
+const mediaData = [
+  {
+    name: 'Photoshop',
+    value: 0.95,
+  },
+  {
+    name: 'After Effects',
+    value: 0.9,
+  },
+  {
+    name: 'Illustrator',
+    value: 0.85,
+  },
+  {
+    name: 'InDesign',
+    value: 0.8,
+  },
+  {
+    name: 'Cinema 4D',
+    value: 0.95,
+  },
+  {
+    name: 'Logic Pro X',
+    value: 0.95,
+  },
+]
+
+const techData = [
+  {
+    name: 'HTML',
+    value: 0.95,
+  },
+  {
+    name: 'CSS, SCSS etc.',
+    value: 0.95,
+  },
+  {
+    name: 'JavaScript',
+    value: 0.95,
+  },
+  {
+    name: 'React',
+    value: 0.95,
+  },
+  {
+    name: 'Gatsby.js',
+    value: 0.8,
+  },
+  {
+    name: 'Next.js',
+    value: 0.85,
+  },
+  {
+    name: 'Node.js',
+    value: 0.9,
+  },
+  {
+    name: 'GraphQL',
+    value: 0.9,
+  },
+  {
+    name: 'REST',
+    value: 0.8,
+  },
+  {
+    name: 'SQL',
+    value: 0.75,
+  },
+  {
+    name: 'Postgis',
+    value: 0.75,
+  },
+  {
+    name: 'Docker',
+    value: 0.7,
+  },
+  {
+    name: 'Swift',
+    value: 0.8,
+  },
+  {
+    name: 'Python',
+    value: 0.7,
+  },
+  {
+    name: 'Jupyter',
+    value: 0.7,
+  },
+]
+
+const otherData = [
+  {
+    name: 'Office',
+    value: 0.9,
+  },
+  {
+    name: 'German',
+    value: 0.95,
+  },
+  {
+    name: 'English',
+    value: 0.9,
+  },
+  {
+    name: 'French',
+    value: 0.4,
+  },
+  {
+    name: 'Japanese',
+    value: 0.4,
+  },
+  {
+    name: 'Mandarin Chinese',
+    value: 0.3,
+  },
+]

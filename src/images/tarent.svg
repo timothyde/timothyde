@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.992831,0,0,0.99184,-23.5862,-125.647)">
+        <g id="Page-1">
+            <g id="Logo_tarent">
+                <g id="Group-2" transform="matrix(1,0,0,1,24,127)">
+                    <path id="Fill-17" d="M32,0C14.327,0 0,14.327 0,32C0,49.673 14.327,64 32,64C49.673,64 64,49.673 64,32C64,14.327 49.673,0 32,0" style="fill:rgb(187,36,42);"/>
+                    <path id="Fill-18" d="M53.268,35.268L42.268,46.268C41.78,46.756 41.14,47 40.5,47C39.86,47 39.22,46.756 38.732,46.268C37.756,45.291 37.756,43.709 38.732,42.732L45.464,36L12.5,36C11.119,36 10,34.881 10,33.5L10,22.5C10,21.119 11.119,20 12.5,20C13.881,20 15,21.119 15,22.5L15,31L45.464,31L38.732,24.268C37.756,23.292 37.756,21.708 38.732,20.732C39.708,19.756 41.292,19.756 42.268,20.732L53.268,31.732C54.244,32.709 54.244,34.291 53.268,35.268" style="fill:rgb(255,255,254);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

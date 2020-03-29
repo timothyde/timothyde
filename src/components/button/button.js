@@ -8,7 +8,7 @@ const Button = styled.a`
   color: #fff;
   line-height: 60px;
   position: relative;
-  min-width: 200px;
+  width: 200px;
   letter-spacing: 1px;
   display: inline-block;
   text-decoration: none;

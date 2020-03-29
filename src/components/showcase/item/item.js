@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Wrapper = styled.div`
+const Wrapper = styled.a`
   padding: 0 20px;
   margin-bottom: 40px;
 
@@ -32,17 +32,54 @@ const Wrapper = styled.div`
 
   &&:hover {
     padding: 10px 30px;
+
+    .showcase-image {
+      background-size: 110%;
+    }
+
+    .showcase-image-full {
+      background-size: auto 110%;
+    }
   }
 `
 
 const Card = styled.div`
-  background: #7e42e1;
+  background: ${props => (props.color ? props.color : '#7e42e1')};
   color: #fff;
 
   padding: 2.5rem;
+  position: relative;
 
   height: 100%;
   width: 100%;
+
+  z-index: -2;
+`
+
+const Image = styled.div`
+  background: url(${props => props.image});
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  &.showcase-image-full {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: -1;
+
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 `
 
 const Title = styled.div`
@@ -69,14 +106,18 @@ const Title = styled.div`
   }
 `
 
-export default () => (
-  <Wrapper>
-    <Card>
+export default ({ customer, title, description, url, color, image, full }) => (
+  <Wrapper href={url}>
+    <Card color={color}>
       <Title>
-        <h1>MeyerSound</h1>
-        <h2>Spacemap Go</h2>
-        <p>iOS Development</p>
+        <h1>{customer}</h1>
+        <h2>{title}</h2>
+        <p>{description}</p>
       </Title>
+      <Image
+        image={image}
+        className={`showcase-image ${full ? `showcase-image-full` : ``}`}
+      />
     </Card>
   </Wrapper>
 )

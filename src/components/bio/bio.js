@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import Item from './vita/item'
 
 import signature from '../../images/signature.svg'
+import tarent from '../../images/tarent.svg'
+import kartenhaus from '../../images/kartenhaus.svg'
 
 let Bio = styled.div`
   position: relative;
@@ -120,9 +122,9 @@ const VitaItems = styled.div`
   padding: 2rem 2rem;
   width: 100%;
 
-  /* @media (min-width: 768px) {
+  @media (min-width: 768px) {
     width: 50%;
-  } */
+  }
 `
 
 export default () => (
@@ -137,19 +139,20 @@ export default () => (
       </Title>
       <Text>
         <h2>
-          <span>Est do enim labore occaecat ad</span>
+          <span>Actually, I'm</span>
           <br />
-          labore eiusmod enim cillum.
+          just pretty damn curious.
         </h2>
         <p>
-          Est do enim labore occaecat ad labore eiusmod enim cillum. Cillum
-          labore proident officia voluptate ea fugiat aliqua aliquip commodo
-          sit. Nostrud voluptate esse eu Lorem ea Lorem reprehenderit laboris
-          ut. Do laboris nostrud do cupidatat sunt ut voluptate dolor
-          consectetur commodo consequat nostrud deserunt. Dolor est adipisicing
-          sit ad pariatur occaecat ullamco commodo laborum ullamco tempor ut
-          ullamco. Adipisicing qui ad velit ullamco ipsum. Elit est aliqua ex
-          sunt laborum.
+          Exploring things is my major passion. Whether it's a hardly known
+          music album by Van Halen, an awesome new JavaScript library or a
+          friend's favorite book. I greatly value listening to people who share
+          their tales, tastes and experiences as a great way of growing - and in
+          the in the end, growth is what makes life meaningful to me. Building a
+          skill-set that covers a wide range of fields and metiers has proven
+          invaluable in founding a business or two and allows viewing a problem
+          from different angles to come up with a suitable solution. <br /> Keep
+          on learning!
         </p>
         <h2>Love,</h2>
         <Signature src={signature} />
@@ -157,23 +160,40 @@ export default () => (
       <Vita>
         <VitaText>
           <h2>
-            <span>Officia ut ad</span>
+            <span>One step</span>
             <br />
-            dolor tempor.
+            at a time.
           </h2>
           <p>
-            Id consectetur sint pariatur officia minim qui elit aliquip aliquip
-            amet cupidatat mollit ex sint. See my{' '}
-            <a href="https://linkedin.com">LinkedIn</a> profile for a more
+            These are the most recent footprints of my prorfessional life. See
+            my <a href="https://linkedin.com">LinkedIn</a> profile for a more
             complete list.
           </p>
         </VitaText>
         <VitaItems>
-          <Item />
-          <Item />
-          <Item />
+          {vitaData.map(data => (
+            <Item {...data} />
+          ))}
         </VitaItems>
       </Vita>
     </Container>
   </Bio>
 )
+
+const vitaData = [
+  {
+    company: 'tarent solutions GmbH',
+    position: 'Senior Technology Consultant',
+    logo: tarent,
+  },
+  {
+    company: 'Kartenhaus Software GmbH',
+    position: 'Fullstack Developer & Product Manager',
+    logo: kartenhaus,
+  },
+  {
+    company: 'Kartenhaus Software GmbH',
+    position: 'Co-Founder',
+    logo: kartenhaus,
+  },
+]

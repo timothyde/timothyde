@@ -1,8 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { LinkButton } from '../button/button'
 import Item from './item/item'
+
+import captainimmo from '../../images/captainimmo.png'
+import aboadieu from '../../images/aboadieu.png'
+import lf4d from '../../images/lf4d.png'
 
 let Showcase = styled.div`
   position: relative;
@@ -125,9 +128,9 @@ export default () => (
         </h1>
       </Title>
       <ItemContainer>
-        <Item />
-        <Item />
-        <Item />
+        {showcaseData.map(data => (
+          <Item {...data} />
+        ))}
         <Text>
           <h2>There's more, but these are the coolest.</h2>
           <p>
@@ -135,9 +138,37 @@ export default () => (
             projects - covering print design, both 2D and 3D animation, web
             development as well as native app development.
           </p>
-          {/* <LinkButton to="/showcase/" title="Full list" /> */}
         </Text>
       </ItemContainer>
     </Container>
   </Showcase>
 )
+
+const showcaseData = [
+  {
+    customer: 'eindruckhochzwei',
+    title: 'Abo Adieu',
+    description: 'iOS Development',
+    url: 'https://apps.apple.com/de/app/abo-adieu/id1079361985',
+    color: '#ff6021',
+    image: aboadieu,
+  },
+  {
+    customer: 'Liquid Force',
+    title: '4D Form ',
+    description: '3D Animation',
+    url: 'https://vimeo.com/193990616',
+    color: '#7e42e1',
+    image: lf4d,
+    full: true,
+  },
+  {
+    customer: 'Kartenhaus Software',
+    title: 'Captain Immo',
+    description: 'Web Development',
+    url:
+      'https://www.general-anzeiger-bonn.de/news/wirtschaft/regional/bonner-start-up-captain-immo-geht-online_aid-43676339',
+    color: '#7e42e1',
+    image: captainimmo,
+  },
+]
