@@ -78,7 +78,6 @@ const Burger = styled.div`
 `
 
 export default ({ open, handler }) => {
-  console.log(open)
   return (
     <Burger className={open ? 'open' : ''} onClick={handler}>
       <span></span>

@@ -28,14 +28,6 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: 'gatsby-source-prismic-graphql',
-      options: {
-        repositoryName: 'timothyde', // (REQUIRED, replace with your own)
-        accessToken:
-          'MC5YbTFITXhRQUFDRUFscXJR.KHDvv70NUBlJexYMVgjvv73vv71z77-977-9C--_vXAc77-9aELvv73vv73vv73vv71Y77-977-9ZA', // (optional API access token)
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

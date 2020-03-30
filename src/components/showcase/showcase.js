@@ -128,8 +128,8 @@ export default () => (
         </h1>
       </Title>
       <ItemContainer>
-        {showcaseData.map(data => (
-          <Item {...data} />
+        {showcaseData.map((data, i) => (
+          <Item key={i} {...data} />
         ))}
         <Text>
           <h2>There's more, but these are the coolest.</h2>

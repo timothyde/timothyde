@@ -171,8 +171,8 @@ export default () => (
           </p>
         </VitaText>
         <VitaItems>
-          {vitaData.map(data => (
-            <Item {...data} />
+          {vitaData.map((data, i) => (
+            <Item key={i} {...data} />
           ))}
         </VitaItems>
       </Vita>

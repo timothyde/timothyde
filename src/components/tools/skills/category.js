@@ -62,8 +62,8 @@ export default ({ title, subtitle, data }) => (
         <p>{subtitle}</p>
       </Title>
       <Skills>
-        {data.map(({ name, value }) => (
-          <Skill name={name} percent={value * 100} />
+        {data.map(({ name, value }, i) => (
+          <Skill key={i} name={name} percent={value * 100} />
         ))}
       </Skills>
     </Card>
