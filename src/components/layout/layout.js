@@ -25,7 +25,7 @@ const Container = styled.div`
   }
 `
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pathname }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header />
+      <Header pathname={pathname} />
       <main>{children}</main>
       <Footer>
         <Container>

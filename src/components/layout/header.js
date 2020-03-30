@@ -82,16 +82,24 @@ export default class Header extends React.Component {
   }
 
   render() {
+    const showNav = this.props.pathname === `/`
     return (
       <Head className={this.state.solid ? 'solid' : ''}>
-        <MobileNav
-          open={this.state.open}
-          handler={this.changeOpen.bind(this)}
-        />
+        {showNav && (
+          <MobileNav
+            open={this.state.open}
+            handler={this.changeOpen.bind(this)}
+          />
+        )}
         <Container>
           <Logo />
-          <Nav />
-          <Burger open={this.state.open} handler={this.changeOpen.bind(this)} />
+          {showNav && <Nav />}
+          {showNav && (
+            <Burger
+              open={this.state.open}
+              handler={this.changeOpen.bind(this)}
+            />
+          )}
         </Container>
       </Head>
     )

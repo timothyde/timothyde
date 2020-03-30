@@ -8,15 +8,17 @@ import Showcase from '../components/showcase/showcase'
 import Tools from '../components/tools/tools'
 import Contact from '../components/contact/contact'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Hero />
-    <Bio />
-    <Showcase />
-    <Tools />
-    <Contact />
-  </Layout>
-)
+const IndexPage = ({ location }) => {
+  return (
+    <Layout pathname={location.pathname}>
+      <SEO title="Home" />
+      <Hero />
+      <Bio />
+      <Showcase />
+      <Tools />
+      <Contact />
+    </Layout>
+  )
+}
 
 export default IndexPage

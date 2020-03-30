@@ -5,8 +5,8 @@ import SEO from '../components/seo'
 import Error from '../components/404/404'
 import Contact from '../components/contact/contact'
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = ({ location }) => (
+  <Layout pathname={location.pathname}>
     <SEO title="Home" />
     <Error />
     <Contact />

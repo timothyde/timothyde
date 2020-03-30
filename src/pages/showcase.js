@@ -5,8 +5,8 @@ import SEO from '../components/seo'
 import Showcase from '../components/showcase/showcase'
 import Contact from '../components/contact/contact'
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = ({ location }) => (
+  <Layout pathname={location.pathname}>
     <SEO title="Home" />
     <Showcase />
     <Contact />
