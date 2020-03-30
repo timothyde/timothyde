@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade'
+import Tada from 'react-reveal/Tada'
 
 import Button from '../button/button'
 
@@ -93,15 +95,20 @@ export default () => (
   <Contact id="contact">
     <Container>
       <Title>
-        <h1>
-          Con-
-          <br />
-          tact
-        </h1>
+        <Fade bottom distance="50px">
+          <h1>
+            Con-
+            <br />
+            tact
+          </h1>
+        </Fade>
       </Title>
       <Text>
         <h2>
-          <span>Want to connect?</span> Awesome!
+          <span>Want to connect?</span>{' '}
+          <Tada forever={true} timeout={3000}>
+            Awesome!
+          </Tada>
         </h2>
         <Button href="mailto:hello@timothy.de" title="Email me!" />
         <p>

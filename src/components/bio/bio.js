@@ -161,7 +161,9 @@ export default () => (
             solution. <br /> Keep on learning!
           </p>
         </Fade>
-        <h2>Love,</h2>
+        <Fade bottom distance="50px">
+          <h2>Love,</h2>
+        </Fade>
         <Signature src={signature} />
       </Text>
       <Vita>

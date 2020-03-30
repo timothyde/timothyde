@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade'
 
 import Category from './skills/category'
 
@@ -105,22 +106,31 @@ export default () => (
   <Tools id="tools">
     <Container>
       <Title>
-        <h1>
-          Tools
-          <br />
-          &amp; skills
-        </h1>
-        <h2>
-          <span>Standing on the</span>
-          <br />
-          shoulders of giants
-        </h2>
-        <p>
-          I've found that by leveraging the latest and greatest tooling you can
-          achieve a 10x boost of productivity. It's especially astonishing how
-          communities like open source push the boundaries of what's possible.
-        </p>
-        <h2>Thank you, folks, for such great products!</h2>
+        <Fade bottom distance="50px">
+          <h1>
+            Tools
+            <br />
+            &amp; skills
+          </h1>
+        </Fade>
+        <Fade bottom distance="50px">
+          <h2>
+            <span>Standing on the</span>
+            <br />
+            shoulders of giants
+          </h2>
+        </Fade>
+        <Fade bottom distance="50px">
+          <p>
+            I've found that by leveraging the latest and greatest tooling you
+            can achieve a 10x boost of productivity. It's especially astonishing
+            how communities like open source push the boundaries of what's
+            possible.
+          </p>
+        </Fade>
+        <Fade bottom distance="50px">
+          <h2>Thank you, folks, for such great products!</h2>
+        </Fade>
       </Title>
       <ItemContainer>
         <Category
