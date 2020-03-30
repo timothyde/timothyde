@@ -50,6 +50,8 @@ const Mobile = styled.div`
   justify-content: center;
   align-items: center;
 
+  pointer-events: none;
+
   top: 0;
   right: 0;
   height: 100vh;
@@ -62,6 +64,7 @@ const Mobile = styled.div`
 
   &.open {
     opacity: 0.95;
+    pointer-events: all;
   }
 
   &.open a {
