@@ -6,7 +6,6 @@ import Category from './skills/category'
 let Tools = styled.div`
   position: relative;
   padding-top: 4rem;
-  background: #092545;
 
   @media (max-width: 768px) {
     padding: 0 0.375rem;

@@ -25,7 +25,16 @@ const Container = styled.div`
   }
 `
 
-const Layout = ({ children, pathname }) => {
+const Main = styled.main`
+  background: #fff;
+  transition: all 0.4s ease;
+
+  &.dark {
+    background: #092545;
+  }
+`
+
+const Layout = ({ children, highlighted, pathname }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -39,7 +48,7 @@ const Layout = ({ children, pathname }) => {
   return (
     <>
       <Header pathname={pathname} />
-      <main>{children}</main>
+      <Main className={highlighted ? `dark` : ``}>{children}</Main>
       <Footer>
         <Container>
           <p>

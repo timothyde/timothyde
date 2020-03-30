@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade'
 
 const Wrapper = styled.a`
   padding: 0 20px;
@@ -40,6 +41,10 @@ const Wrapper = styled.a`
     .showcase-image-full {
       background-size: auto 110%;
     }
+  }
+
+  & > div {
+    height: 100%;
   }
 `
 
@@ -108,16 +113,18 @@ const Title = styled.div`
 
 export default ({ customer, title, description, url, color, image, full }) => (
   <Wrapper href={url}>
-    <Card color={color}>
-      <Title>
-        <h1>{customer}</h1>
-        <h2>{title}</h2>
-        <p>{description}</p>
-      </Title>
-      <Image
-        image={image}
-        className={`showcase-image ${full ? `showcase-image-full` : ``}`}
-      />
-    </Card>
+    <Fade bottom distance="50px">
+      <Card color={color}>
+        <Title>
+          <h1>{customer}</h1>
+          <h2>{title}</h2>
+          <p>{description}</p>
+        </Title>
+        <Image
+          image={image}
+          className={`showcase-image ${full ? `showcase-image-full` : ``}`}
+        />
+      </Card>
+    </Fade>
   </Wrapper>
 )

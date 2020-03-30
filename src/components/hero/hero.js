@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade'
 
 import Button from '../button/button'
 import hero from '../../images/hero.png'
@@ -127,19 +128,25 @@ export default () => (
   <Hero>
     <Container>
       <Text>
-        <h1>
-          Tech Enthusiast,
-          <br />
-          Music Affine,
-          <br />
-          Great At Googling
-        </h1>
-        <p>
-          Hi there! I am Timothy, currently working as a technology consultant{' '}
-          <a href="https://tarent.de">@tarent</a>. Have a fun project to collab
-          on? Awesome, <a href="mailto:hello@timothy.de">hit me up</a>!
-        </p>
-        <Button itemName="bio" title="Scroll down" />
+        <Fade bottom distance="100px">
+          <h1>
+            Tech Enthusiast,
+            <br />
+            Music Affine,
+            <br />
+            Great At Googling
+          </h1>
+        </Fade>
+        <Fade bottom delay={100} distance="100px">
+          <p>
+            Hi there! I am Timothy, currently working as a technology consultant{' '}
+            <a href="https://tarent.de">@tarent</a>. Have a fun project to
+            collab on? Awesome, <a href="mailto:hello@timothy.de">hit me up</a>!
+          </p>
+        </Fade>
+        <Fade bottom delay={200} distance="100px">
+          <Button itemName="bio" title="Scroll down" />
+        </Fade>
       </Text>
       <ImageContainer>
         <Image src={hero} />

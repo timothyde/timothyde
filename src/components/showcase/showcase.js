@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade'
 
 import Item from './item/item'
 
@@ -120,13 +121,15 @@ let Text = styled.div`
 export default () => (
   <Showcase id="showcase">
     <Container>
-      <Title>
-        <h1>
-          Show-
-          <br />
-          case
-        </h1>
-      </Title>
+      <Fade bottom distance="50px">
+        <Title>
+          <h1>
+            Show-
+            <br />
+            case
+          </h1>
+        </Title>
+      </Fade>
       <ItemContainer>
         {showcaseData.map((data, i) => (
           <Item key={i} {...data} />
