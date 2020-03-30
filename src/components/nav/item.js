@@ -31,7 +31,7 @@ const Item = styled.a`
   }
 `
 
-export default ({ itemName, children }) => {
+export const NavItem = ({ itemName, children }) => {
   const [anchorTarget, setAnchorTarget] = useState(null)
 
   useEffect(() => {
@@ -56,5 +56,46 @@ export default ({ itemName, children }) => {
     >
       {children}
     </Item>
+  )
+}
+
+const MobileItem = styled.a`
+  color: #fff;
+  font-size: 55px;
+  line-height: 65px;
+
+  transition: transform 0.3s;
+  transition-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+  transform: translateY(-90px);
+
+  font-family: 'Montserrat', sans-serif;
+`
+
+export const MobileNavItem = ({ itemName, children, handler }) => {
+  const [anchorTarget, setAnchorTarget] = useState(null)
+
+  useEffect(() => {
+    setAnchorTarget(document.getElementById(itemName))
+  }, [itemName])
+
+  const handleClick = event => {
+    event.preventDefault()
+    handler()
+
+    const yOffset = -100
+    const y =
+      anchorTarget.getBoundingClientRect().top + window.pageYOffset + yOffset
+
+    window.scrollTo({ top: y, behavior: 'smooth' })
+  }
+
+  return (
+    <MobileItem
+      href={`#${itemName}`}
+      onClick={handleClick}
+      ariaLabel={`Scroll to ${itemName}`}
+    >
+      {children}
+    </MobileItem>
   )
 }
