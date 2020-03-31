@@ -12,7 +12,6 @@ let Head = styled.header`
   z-index: 999;
   width: 100%;
   background: none;
-  overflow: hidden;
   padding: 25px 0px 25px;
   transition: all ease 0.5s;
 

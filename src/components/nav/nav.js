@@ -6,6 +6,8 @@ import { NavItem, MobileNavItem } from './item'
 let Navigation = styled.nav`
   display: none;
 
+  width: 100%;
+
   @media (min-width: 576px) {
     display: inline-block;
   }
