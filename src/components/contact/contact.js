@@ -112,8 +112,23 @@ export default () => (
         </h2>
         <SimpleButton href="mailto:hello@timothy.de" title="Email me!" />
         <p>
-          Or... you can add me on <a href="mailto:hello@timothy.de">LinkedIn</a>{' '}
-          or <a href="mailto:hello@timothy.de">Twitter</a>. Cheers!
+          Or... you can add me on{' '}
+          <a
+            href="https://www.linkedin.com/in/timothyde/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            LinkedIn
+          </a>{' '}
+          or{' '}
+          <a
+            href="https://twitter.com/timothy__de"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Twitter
+          </a>
+          . Cheers!
         </p>
       </Text>
     </Container>

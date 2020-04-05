@@ -171,8 +171,15 @@ export default () => (
           </h2>
           <p>
             These are the most recent footprints of my prorfessional life. See
-            my <a href="https://linkedin.com">LinkedIn</a> profile for a more
-            complete list.
+            my{' '}
+            <a
+              href="https://www.linkedin.com/in/timothyde/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              LinkedIn
+            </a>{' '}
+            profile for a more complete list.
           </p>
         </VitaText>
         <VitaItems>
