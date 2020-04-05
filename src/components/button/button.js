@@ -147,3 +147,7 @@ export default ({ itemName, title }) => {
 export const LinkButton = ({ title, to }) => (
   <StyledLink title={title} to={to}></StyledLink>
 )
+
+export const SimpleButton = ({ href, title }) => {
+  return <Button href={href} ariaLabel={`Go to ${href}`} title={title}></Button>
+}

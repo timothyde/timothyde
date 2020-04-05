@@ -147,8 +147,6 @@ export default () => (
             <br />
             just pretty damn curious.
           </h2>
-        </Fade>
-        <Fade bottom distance="50px">
           <p>
             Exploring things is my major passion. Whether it's a hardly known
             music album by Van Halen, an awesome new JavaScript library or a
@@ -160,11 +158,9 @@ export default () => (
             viewing a problem from different angles to come up with a suitable
             solution. <br /> Keep on learning!
           </p>
-        </Fade>
-        <Fade bottom distance="50px">
           <h2>Love,</h2>
+          <Signature src={signature} />
         </Fade>
-        <Signature src={signature} />
       </Text>
       <Vita>
         <VitaText>

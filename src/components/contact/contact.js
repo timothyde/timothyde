@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
 import Tada from 'react-reveal/Tada'
 
-import Button from '../button/button'
+import { SimpleButton } from '../button/button'
 
 let Contact = styled.div`
   position: relative;
@@ -110,7 +110,7 @@ export default () => (
             Awesome!
           </Tada>
         </h2>
-        <Button href="mailto:hello@timothy.de" title="Email me!" />
+        <SimpleButton href="mailto:hello@timothy.de" title="Email me!" />
         <p>
           Or... you can add me on <a href="mailto:hello@timothy.de">LinkedIn</a>{' '}
           or <a href="mailto:hello@timothy.de">Twitter</a>. Cheers!
