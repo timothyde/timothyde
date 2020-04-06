@@ -112,7 +112,7 @@ const Title = styled.div`
 `
 
 export default ({ customer, title, description, url, color, image, full }) => (
-  <Wrapper href={url}>
+  <Wrapper href={url} rel="noopener noreferrer" target="_blank">
     <Fade bottom distance="50px">
       <Card color={color}>
         <Title>
