@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout/layout'
 import SEO from '../components/seo'
@@ -36,10 +37,12 @@ export default class IndexPage extends React.Component {
   render() {
     const location = this.props.location
     const highlighted = this.state.highlighted
+    const hero = this.props.data.hero.childImageSharp.fluid
+
     return (
       <Layout pathname={location.pathname} highlighted={highlighted}>
         <SEO title="Home" />
-        <Hero />
+        <Hero image={hero} />
         <Bio />
         <Showcase />
         <Tools />
@@ -48,3 +51,15 @@ export default class IndexPage extends React.Component {
     )
   }
 }
+
+export const query = graphql`
+  query {
+    hero: file(relativePath: { eq: "hero.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`

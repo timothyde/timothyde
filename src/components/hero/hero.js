@@ -1,9 +1,9 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
 
 import Button from '../button/button'
-import hero from '../../images/hero.png'
 import triangle from '../../images/triangle.svg'
 
 let Hero = styled.div`
@@ -63,7 +63,7 @@ let ImageContainer = styled.div`
   padding: 2rem;
 `
 
-let Image = styled.img`
+let Image = styled(Img)`
   height: auto;
   width: 100%;
 `
@@ -124,7 +124,7 @@ let Text = styled.div`
   }
 `
 
-export default () => (
+export default ({ image }) => (
   <Hero>
     <Container>
       <Text>
@@ -156,7 +156,9 @@ export default () => (
         </Fade>
       </Text>
       <ImageContainer>
-        <Image src={hero} />
+        <Fade delay={100}>
+          <Image fluid={image} />
+        </Fade>
       </ImageContainer>
     </Container>
   </Hero>
