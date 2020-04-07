@@ -44,7 +44,7 @@ export default class IndexPage extends React.Component {
         <SEO title="Home" />
         <Hero image={hero} />
         <Bio />
-        <Showcase />
+        <Showcase data={this.props.data} />
         <Tools />
         <Contact />
       </Layout>
@@ -55,6 +55,27 @@ export default class IndexPage extends React.Component {
 export const query = graphql`
   query {
     hero: file(relativePath: { eq: "hero.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    aboadieu: file(relativePath: { eq: "aboadieu.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    captainimmo: file(relativePath: { eq: "captainimmo.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    lf4d: file(relativePath: { eq: "lf4d.png" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid_tracedSVG

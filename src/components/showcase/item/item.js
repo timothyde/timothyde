@@ -1,4 +1,6 @@
 import React from 'react'
+import Img from 'gatsby-image'
+
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
 
@@ -35,11 +37,11 @@ const Wrapper = styled.a`
     padding: 10px 30px;
 
     .showcase-image {
-      background-size: 110%;
+      width: 110%;
     }
 
     .showcase-image-full {
-      background-size: auto 110%;
+      height: 110%;
     }
   }
 
@@ -52,33 +54,59 @@ const Card = styled.div`
   background: ${props => (props.color ? props.color : '#7e42e1')};
   color: #fff;
 
-  padding: 2.5rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 
   height: 100%;
   width: 100%;
 
+  overflow: hidden;
+
   z-index: -2;
 `
 
-const Image = styled.div`
-  background: url(${props => props.image});
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: 100%;
+// const Image = styled.div`
+//   background: url(${props => props.image});
+//   background-position: bottom;
+//   background-repeat: no-repeat;
+//   background-size: 100%;
+
+//   &.showcase-image-full {
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: auto 100%;
+//   }
+
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+
+//   z-index: -1;
+
+//   transition: all 0.3s ease;
+//   -o-transition: all 0.3s ease;
+//   -moz-transition: all 0.3s ease;
+//   -webkit-transition: all 0.3s ease;
+// `
+
+const Image = styled(Img)`
+  /* ${props => (props.full ? `height: 100%;` : `width: 100%;`)} */
 
   &.showcase-image-full {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
+    height: 100%;
+    width: 100%;
+  }
+  
+  &&.showcase-image {
+    width: 100%;
   }
 
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
+  position: absolute !important;
   z-index: -1;
 
   transition: all 0.3s ease;
@@ -88,6 +116,11 @@ const Image = styled.div`
 `
 
 const Title = styled.div`
+  position: absolute;
+  left: 2.5rem;
+  top: 2.5rem;
+  max-width: calc(100% - 2.5rem);
+
   h1 {
     color: #fff;
     text-transform: uppercase;
@@ -108,10 +141,11 @@ const Title = styled.div`
     color: #fff;
     padding-right: 50px;
     margin-bottom: 10px;
+    word-wrap: break-all;
   }
 `
 
-export default ({ customer, title, description, url, color, image, full }) => (
+export default ({ customer, title, description, url, color, full, fluid }) => (
   <Wrapper href={url} rel="noopener noreferrer" target="_blank">
     <Fade bottom distance="50px">
       <Card color={color}>
@@ -121,8 +155,8 @@ export default ({ customer, title, description, url, color, image, full }) => (
           <p>{description}</p>
         </Title>
         <Image
-          image={image}
-          className={`showcase-image ${full ? `showcase-image-full` : ``}`}
+          fluid={fluid}
+          className={full ? `showcase-image-full` : `showcase-image`}
         />
       </Card>
     </Fade>

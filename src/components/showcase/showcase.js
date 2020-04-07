@@ -4,10 +4,6 @@ import Fade from 'react-reveal/Fade'
 
 import Item from './item/item'
 
-import captainimmo from '../../images/captainimmo.png'
-import aboadieu from '../../images/aboadieu.png'
-import lf4d from '../../images/lf4d.png'
-
 let Showcase = styled.div`
   position: relative;
 
@@ -118,60 +114,62 @@ let Text = styled.div`
   }
 `
 
-export default () => (
-  <Showcase id="showcase">
-    <Container>
-      <Fade bottom distance="50px">
-        <Title>
-          <h1>
-            Show-
-            <br />
-            case
-          </h1>
-        </Title>
-      </Fade>
-      <ItemContainer>
-        {showcaseData.map((data, i) => (
-          <Item key={i} {...data} />
-        ))}
-        <Text>
-          <h2>There's more, but these are the coolest.</h2>
-          <p>
-            Over the last few years, I've been part of a pretty wide range of
-            projects - covering print design, both 2D and 3D animation, web
-            development as well as native app development.
-          </p>
-        </Text>
-      </ItemContainer>
-    </Container>
-  </Showcase>
-)
+export default ({ data }) => {
+  const showcaseData = [
+    {
+      customer: 'eindruckhochzwei',
+      title: 'Abo Adieu',
+      description: 'iOS Development',
+      url: 'https://apps.apple.com/de/app/abo-adieu/id1079361985',
+      color: '#ff6021',
+      fluid: data.aboadieu.childImageSharp.fluid,
+    },
+    {
+      customer: 'Liquid Force',
+      title: '4D Form ',
+      description: '3D Animation',
+      url: 'https://vimeo.com/193990616',
+      color: '#7e42e1',
+      fluid: data.lf4d.childImageSharp.fluid,
+      full: true,
+    },
+    {
+      customer: 'Kartenhaus Software',
+      title: 'Captain Immo',
+      description: 'Web Development',
+      url:
+        'https://www.general-anzeiger-bonn.de/news/wirtschaft/regional/bonner-start-up-captain-immo-geht-online_aid-43676339',
+      color: '#7e42e1',
+      fluid: data.captainimmo.childImageSharp.fluid,
+    },
+  ]
 
-const showcaseData = [
-  {
-    customer: 'eindruckhochzwei',
-    title: 'Abo Adieu',
-    description: 'iOS Development',
-    url: 'https://apps.apple.com/de/app/abo-adieu/id1079361985',
-    color: '#ff6021',
-    image: aboadieu,
-  },
-  {
-    customer: 'Liquid Force',
-    title: '4D Form ',
-    description: '3D Animation',
-    url: 'https://vimeo.com/193990616',
-    color: '#7e42e1',
-    image: lf4d,
-    full: true,
-  },
-  {
-    customer: 'Kartenhaus Software',
-    title: 'Captain Immo',
-    description: 'Web Development',
-    url:
-      'https://www.general-anzeiger-bonn.de/news/wirtschaft/regional/bonner-start-up-captain-immo-geht-online_aid-43676339',
-    color: '#7e42e1',
-    image: captainimmo,
-  },
-]
+  return (
+    <Showcase id="showcase">
+      <Container>
+        <Fade bottom distance="50px">
+          <Title>
+            <h1>
+              Show-
+              <br />
+              case
+            </h1>
+          </Title>
+        </Fade>
+        <ItemContainer>
+          {showcaseData.map((data, i) => (
+            <Item key={i} {...data} />
+          ))}
+          <Text>
+            <h2>There's more, but these are the coolest.</h2>
+            <p>
+              Over the last few years, I've been part of a pretty wide range of
+              projects - covering print design, both 2D and 3D animation, web
+              development as well as native app development.
+            </p>
+          </Text>
+        </ItemContainer>
+      </Container>
+    </Showcase>
+  )
+}
