@@ -68,40 +68,12 @@ const Card = styled.div`
   z-index: -2;
 `
 
-// const Image = styled.div`
-//   background: url(${props => props.image});
-//   background-position: bottom;
-//   background-repeat: no-repeat;
-//   background-size: 100%;
-
-//   &.showcase-image-full {
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: auto 100%;
-//   }
-
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-
-//   z-index: -1;
-
-//   transition: all 0.3s ease;
-//   -o-transition: all 0.3s ease;
-//   -moz-transition: all 0.3s ease;
-//   -webkit-transition: all 0.3s ease;
-// `
-
 const Image = styled(Img)`
-  /* ${props => (props.full ? `height: 100%;` : `width: 100%;`)} */
-
   &.showcase-image-full {
     height: 100%;
     width: 100%;
   }
-  
+
   &&.showcase-image {
     width: 100%;
   }
