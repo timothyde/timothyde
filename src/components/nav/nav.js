@@ -15,10 +15,11 @@ let Navigation = styled.nav`
 
 export const Nav = () => (
   <Navigation>
-    <NavItem itemName={`bio`}>Bio</NavItem>
-    <NavItem itemName={`showcase`}>Showcase</NavItem>
-    <NavItem itemName={`tools`}>Tools</NavItem>
-    <NavItem itemName={`contact`}>Contact</NavItem>
+    <NavItem itemName={`bio`}>Über Mich</NavItem>
+    <NavItem itemName={`blog`}>Blog</NavItem>
+    <NavItem itemName={`showcase`}>Projekte</NavItem>
+    <NavItem itemName={`politics`}>Politik</NavItem>
+    <NavItem itemName={`contact`}>Kontakt</NavItem>
   </Navigation>
 )
 
@@ -79,16 +80,16 @@ export const MobileNav = ({ open, handler }) => (
     <Overlay className={open ? `open` : ``} />
     <Mobile className={open ? `open` : ``}>
       <MobileNavItem itemName={`bio`} handler={handler}>
-        Bio
+        Über Mich
       </MobileNavItem>
       <MobileNavItem itemName={`showcase`} handler={handler}>
-        Showcase
+        Projekte
       </MobileNavItem>
-      <MobileNavItem itemName={`tools`} handler={handler}>
-        Tools
+      <MobileNavItem itemName={`politics`} handler={handler}>
+        Politik
       </MobileNavItem>
       <MobileNavItem itemName={`contact`} handler={handler}>
-        Contact
+        Kontakt
       </MobileNavItem>
     </Mobile>
   </>

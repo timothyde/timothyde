@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Skill from './skill'
-
-const Wrapper = styled.div`
+const CardWrapper = styled.div`
   padding: 0 20px;
   margin-bottom: 40px;
 
@@ -17,13 +15,13 @@ const Wrapper = styled.div`
     }
 
     :nth-child(2) {
-      margin-top: -20rem;
+      margin-top: -20%;
     }
   }
 `
 
 const Card = styled.div`
-  background: #0d2d52;
+  background: #33a3df;
 
   padding: 2.5rem;
 
@@ -37,35 +35,23 @@ const Title = styled.div`
     text-transform: uppercase;
     letter-spacing: 2.5px;
     margin-bottom: 10px;
-    font-size: 19px;
+    font-size: 32px;
     letter-spacing: -0.5px;
     line-height: 28px;
   }
 
   p {
-    color: #4973a2;
+    color: rgba(32, 29, 27, 0.4);
   }
 `
 
-const Skills = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
-`
-
-export default ({ title, subtitle, data }) => (
-  <Wrapper>
+export default ({ title, subtitle }) => (
+  <CardWrapper>
     <Card>
       <Title>
         <h1>{title}</h1>
         <p>{subtitle}</p>
       </Title>
-      <Skills>
-        {data.map(({ name, value }, i) => (
-          <Skill key={i} name={name} percent={value * 100} />
-        ))}
-      </Skills>
     </Card>
-  </Wrapper>
+  </CardWrapper>
 )

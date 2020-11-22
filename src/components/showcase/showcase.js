@@ -119,7 +119,7 @@ export default ({ data }) => {
     {
       customer: 'eindruckhochzwei',
       title: 'Abo Adieu',
-      description: 'iOS Development',
+      description: 'iOS-Entwicklung',
       url: 'https://apps.apple.com/de/app/abo-adieu/id1079361985',
       color: '#ff6021',
       fluid: data.aboadieu.childImageSharp.fluid,
@@ -127,7 +127,7 @@ export default ({ data }) => {
     {
       customer: 'Liquid Force',
       title: '4D Form ',
-      description: '3D Animation',
+      description: '3D-Animation',
       url: 'https://vimeo.com/193990616',
       color: '#7e42e1',
       fluid: data.lf4d.childImageSharp.fluid,
@@ -136,7 +136,7 @@ export default ({ data }) => {
     {
       customer: 'Kartenhaus Software',
       title: 'Captain Immo',
-      description: 'Web Development',
+      description: 'Webentwicklung',
       url:
         'https://www.general-anzeiger-bonn.de/news/wirtschaft/regional/bonner-start-up-captain-immo-geht-online_aid-43676339',
       color: '#7e42e1',
@@ -150,9 +150,9 @@ export default ({ data }) => {
         <Fade bottom distance="50px">
           <Title>
             <h1>
-              Show-
+              Proj-
               <br />
-              case
+              ekte
             </h1>
           </Title>
         </Fade>
@@ -161,11 +161,14 @@ export default ({ data }) => {
             <Item key={i} {...data} />
           ))}
           <Text>
-            <h2>There's more, but these are the coolest.</h2>
+            <h2>Es gibt noch mehr, aber</h2>
+            <h2>
+              <b>das sind meine Lieblinge</b>
+            </h2>
             <p>
-              Over the last few years, I've been part of a pretty wide range of
-              projects - covering print design, both 2D and 3D animation, web
-              development as well as native app development.
+              Über die Jahre war ich Teil von einer ganzen Reihe
+              unterschiedlicher Projekte: Printdesign, 2D- und 3D-Animation,
+              Webentwicklung und die Entwicklung mobiler Apps.
             </p>
           </Text>
         </ItemContainer>

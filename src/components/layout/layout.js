@@ -30,21 +30,11 @@ const Main = styled.main`
   transition: all 0.4s ease;
 
   &.dark {
-    background: #092545;
+    background: #043634;
   }
 `
 
 const Layout = ({ children, highlighted, pathname }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <>
       <Header pathname={pathname} />

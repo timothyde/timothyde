@@ -97,22 +97,22 @@ export default () => (
       <Title>
         <Fade bottom distance="50px">
           <h1>
-            Con-
+            Kon-
             <br />
-            tact
+            takt
           </h1>
         </Fade>
       </Title>
       <Text>
         <h2>
-          <span>Want to connect?</span>{' '}
+          <span>Du möchtest Kontakt halten?</span>{' '}
           <Tada forever={true} timeout={3000}>
-            Awesome!
+            Nice!
           </Tada>
         </h2>
         <SimpleButton href="mailto:hello@timothy.de" title="Email me!" />
         <p>
-          Or... you can add me on{' '}
+          Oder... du kannst mir auf{' '}
           <a
             href="https://www.linkedin.com/in/timothyde/"
             rel="noopener noreferrer"
@@ -120,7 +120,7 @@ export default () => (
           >
             LinkedIn
           </a>{' '}
-          or{' '}
+          oder{' '}
           <a
             href="https://twitter.com/timothy__de"
             rel="noopener noreferrer"
@@ -128,7 +128,7 @@ export default () => (
           >
             Twitter
           </a>
-          . Cheers!
+          folgen. Cheers!
         </p>
       </Text>
     </Container>

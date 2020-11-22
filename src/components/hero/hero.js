@@ -139,7 +139,7 @@ export default ({ image }) => (
         </Fade>
         <Fade bottom delay={100} distance="100px">
           <p>
-            Hi there! I am Timothy, currently working as a technology consultant{' '}
+            Hi! Ich bin Timothy und arbeite derzeit als Technology Consultant{' '}
             <a
               href="https://tarent.de"
               rel="noopener noreferrer"
@@ -147,8 +147,8 @@ export default ({ image }) => (
             >
               @tarent
             </a>
-            . Have a fun project to collab on? Awesome,{' '}
-            <a href="mailto:hello@timothy.de">hit me up</a>!
+            . Du hast ein spannendes Projekt und suchst Unterstützung? Cool,{' '}
+            <a href="mailto:hello@timothy.de">schreib mir</a>!
           </p>
         </Fade>
         <Fade bottom delay={200} distance="100px">

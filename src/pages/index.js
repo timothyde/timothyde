@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 import Hero from '../components/hero/hero'
 import Bio from '../components/bio/bio'
 import Showcase from '../components/showcase/showcase'
-import Tools from '../components/tools/tools'
+import Politics from '../components/politics/politics'
 import Contact from '../components/contact/contact'
 
 export default class IndexPage extends React.Component {
@@ -26,11 +26,11 @@ export default class IndexPage extends React.Component {
   //then create the method
   getWindowHeight() {
     const distanceY = window.pageYOffset || document.documentElement.scrollTop
-    const toolsTop = document.getElementById('tools').offsetTop - 400
-    const toolsBottom = document.getElementById('contact').offsetTop - 600
+    const politicsTop = document.getElementById('politics').offsetTop - 400
+    const politicsBottom = document.getElementById('contact').offsetTop - 600
 
     this.setState({
-      highlighted: distanceY > toolsTop && distanceY < toolsBottom,
+      highlighted: distanceY > politicsTop && distanceY < politicsBottom,
     })
   }
 
@@ -45,7 +45,7 @@ export default class IndexPage extends React.Component {
         <Hero image={hero} />
         <Bio />
         <Showcase data={this.props.data} />
-        <Tools />
+        <Politics />
         <Contact />
       </Layout>
     )
