@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: `Timothy.de`,
@@ -14,6 +16,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: `${process.env.PRISMIC_REPOSITORY_NAME}`,
+        accessToken: `${process.env.PRISMIC_ACCESS_TOKEN}`,
+        schemas: {
+          blog_post: require('./src/schemas/blog_post.json'),
+        },
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -24,7 +36,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ff6021`,
-        display: ``,
+        display: `browser`,
         icon: `src/images/icon.svg`, // This path is relative to the root of the site.
       },
     },

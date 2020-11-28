@@ -1,7 +1,48 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require('path')
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  // Query all Pages with their IDs and template data.
+  const pages = await graphql(`
+    query PostsQuery {
+      posts: allPrismicBlogPost {
+        nodes {
+          data {
+            teaser {
+              text
+            }
+            subtitle {
+              text
+            }
+            title {
+              text
+            }
+            text {
+              html
+            }
+          }
+          uid
+          id
+          first_publication_date
+        }
+      }
+    }
+  `)
+
+  const postTemplate = path.resolve(
+    './src/components/templates/postTemplate.js'
+  )
+
+  // Create pages for each Post in Prismic.
+  pages.data.posts.nodes.forEach(node => {
+    console.log('node.uid', node.uid)
+    createPage({
+      path: `/blog/${node.uid}`,
+      component: postTemplate,
+      context: {
+        ...node,
+      },
+    })
+  })
+}
