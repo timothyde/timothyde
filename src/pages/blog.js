@@ -2,15 +2,15 @@ import React from 'react'
 
 import Layout from '../components/layout/layout'
 import SEO from '../components/seo'
-import Imprint from '../components/imprint/imprint'
+import Blog from '../components/blog/blog'
 import Contact from '../components/contact/contact'
 
-const ImprintPage = ({ location }) => (
+const BlogPage = ({ location }) => (
   <Layout pathname={location.pathname}>
-    <SEO title="Impressum" />
-    <Imprint />
+    <SEO title="Blog" />
+    <Blog />
     <Contact />
   </Layout>
 )
 
-export default ImprintPage
+export default BlogPage

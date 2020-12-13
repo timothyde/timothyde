@@ -21,6 +21,10 @@ exports.createPages = async ({ graphql, actions }) => {
             text {
               html
             }
+            image {
+              alt
+              url
+            }
           }
           uid
           id

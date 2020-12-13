@@ -11,9 +11,6 @@ const Wrapper = styled.div`
     font-size: 24px;
     margin: 0;
   }
-
-  p {
-  }
 `
 
 export default ({ uid, subtitle, teaser, title }) => (
