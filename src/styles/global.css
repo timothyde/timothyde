@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600,800|Neuton:400i|Noto+Sans&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background-color 0.4s ease;
+}
+body.dark {
+  background-color: #043634;
+}
+
 h1,
 h2 {
   font-family: 'Montserrat', sans-serif;

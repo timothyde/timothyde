@@ -1,4 +1,5 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
@@ -124,42 +125,56 @@ let Text = styled.div`
   }
 `
 
-export default ({ image }) => (
-  <Hero>
-    <Container>
-      <Text>
-        <Fade bottom distance="100px">
-          <h1>
-            Tech Enthusiast,
-            <br />
-            Music Affine,
-            <br />
-            Great At Googling
-          </h1>
-        </Fade>
-        <Fade bottom delay={100} distance="100px">
-          <p>
-            Hi! Ich bin Timothy und arbeite derzeit als Technology Consultant{' '}
-            <a
-              href="https://tarent.de"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              @tarent
-            </a>
-            . Du hast ein spannendes Projekt und suchst Unterstützung? Cool,{' '}
-            <a href="mailto:hello@timothy.de">schreib mir</a>!
-          </p>
-        </Fade>
-        <Fade bottom delay={200} distance="100px">
-          <Button itemName="bio" title="Scroll down" />
-        </Fade>
-      </Text>
-      <ImageContainer>
-        <Fade delay={100}>
-          <Image fluid={image} />
-        </Fade>
-      </ImageContainer>
-    </Container>
-  </Hero>
-)
+export default () => {
+  const data = useStaticQuery(graphql`
+    query HeroQuery {
+      hero: file(relativePath: { eq: "hero.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <Hero>
+      <Container>
+        <Text>
+          <Fade bottom distance="100px">
+            <h1>
+              Tech Enthusiast,
+              <br />
+              Music Affine,
+              <br />
+              Great At Googling
+            </h1>
+          </Fade>
+          <Fade bottom delay={100} distance="100px">
+            <p>
+              Hi! Ich bin Timothy und arbeite derzeit als Technology Consultant{' '}
+              <a
+                href="https://tarent.de"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                @tarent
+              </a>
+              . Du hast ein spannendes Projekt und suchst Unterstützung? Cool,{' '}
+              <a href="mailto:hello@timothy.de">schreib mir</a>!
+            </p>
+          </Fade>
+          <Fade bottom delay={200} distance="100px">
+            <Button itemName="bio" title="Scroll down" />
+          </Fade>
+        </Text>
+        <ImageContainer>
+          <Fade delay={100}>
+            <Image fluid={data.hero.childImageSharp.fluid} />
+          </Fade>
+        </ImageContainer>
+      </Container>
+    </Hero>
+  )
+}

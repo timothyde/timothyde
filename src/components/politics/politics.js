@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import 'intersection-observer'
+import { useIsVisible } from 'react-is-visible'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
 
+import { Container, Title, Text as T } from '../layout/container'
 import Post from './blog/post'
 
 let Politics = styled.div`
@@ -14,94 +17,80 @@ let Politics = styled.div`
     padding-top: 4rem;
   }
 
-  a {
-    color: #21ff85;
-
-    &:after {
-      background-color: #21ff85;
-    }
-  }
-`
-
-let Container = styled.div`
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-
-  @media (min-width: 768px) {
-    width: 740px;
-  }
-
-  @media (min-width: 992px) {
-    width: 960px;
-  }
-`
-
-let Title = styled.div`
   h1 {
     background-image: linear-gradient(to bottom, #21ff85, #21ff85);
-    color: transparent;
-    display: inline-block;
-    -webkit-background-clip: text;
-    background-clip: text;
-    margin-bottom: 20px;
-    text-indent: -3px;
-    margin-left: -6px;
-    padding: 20px 0px 10px 0px;
-    letter-spacing: -2px;
-
-    line-height: 45px;
-    font-size: 60px;
-
-    @media (min-width: 768px) {
-      font-size: 80px;
-      line-height: 70px;
-    }
-
-    @media (min-width: 960px) {
-      font-size: 120px;
-      line-height: 110px;
-    }
   }
+`
 
-  h2 {
-    color: #f6faf5;
-  }
+// let Title = styled.div`
+//   h1 {
+//     background-image: linear-gradient(to bottom, #21ff85, #21ff85);
+//     color: transparent;
+//     display: inline-block;
+//     -webkit-background-clip: text;
+//     background-clip: text;
+//     margin-bottom: 20px;
+//     text-indent: -3px;
+//     margin-left: -6px;
+//     padding: 20px 0px 10px 0px;
+//     letter-spacing: -2px;
 
-  p {
-    color: #f6faf5;
-  }
+//     line-height: 45px;
+//     font-size: 60px;
 
-  p > a {
-    color: #2d6ae3;
-    position: relative;
-    display: inline-block;
-  }
+//     @media (min-width: 768px) {
+//       font-size: 80px;
+//       line-height: 70px;
+//     }
 
-  p a::after {
-    width: 100%;
-    height: 2px;
-    background: #2d6ae3;
-    content: '';
-    left: 0;
-    position: absolute;
-    bottom: -1px;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-  }
+//     @media (min-width: 960px) {
+//       font-size: 120px;
+//       line-height: 110px;
+//     }
+//   }
 
+//   h2 {
+//     color: #f6faf5;
+//   }
+
+//   p {
+//     color: #f6faf5;
+//   }
+
+//   p > a {
+//     color: #2d6ae3;
+//     position: relative;
+//     display: inline-block;
+//   }
+
+//   p a::after {
+//     width: 100%;
+//     height: 2px;
+//     background: #2d6ae3;
+//     content: '';
+//     left: 0;
+//     position: absolute;
+//     bottom: -1px;
+//     transition: all 0.3s ease;
+//     box-sizing: border-box;
+//   }
+
+//   width: 100%;
+
+//   margin-bottom: 50px;
+
+//   @media (min-width: 768px) {
+//     width: 100%;
+//   }
+
+//   @media (min-width: 1200px) {
+//     width: 80%;
+//   }
+// `
+
+const Text = styled(T)`
+  text-align: left;
   width: 100%;
-
-  margin-bottom: 50px;
-
-  @media (min-width: 768px) {
-    width: 100%;
-  }
-
-  @media (min-width: 1200px) {
-    width: 80%;
-  }
 `
 
 let ItemContainer = styled.div`
@@ -140,7 +129,7 @@ const Card = styled.div`
 `
 
 const CardTitle = styled.div`
-  h1 {
+  h2 {
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -160,10 +149,10 @@ const Blog = styled.div`
   flex-wrap: wrap;
 `
 
-const BlogText = styled.div`
+const BlogText = styled(T)`
   padding: 0 1rem;
+  text-align: left;
   width: 100%;
-  color: #fff;
 
   @media (min-width: 768px) {
     margin-top: 4rem;
@@ -209,6 +198,14 @@ export default () => {
     }
   `)
 
+  const nodeRef = useRef()
+  const isVisible = useIsVisible(nodeRef)
+
+  useEffect(() => {
+    const body = document.body
+    body.classList.toggle('dark', isVisible)
+  }, [isVisible])
+
   return (
     <Politics id="politics">
       <Container>
@@ -220,6 +217,8 @@ export default () => {
               itik
             </h1>
           </Fade>
+        </Title>
+        <Text>
           <Fade bottom distance="50px">
             <h2>
               "Und welcher der beiden Wölfe gewinnt?"
@@ -238,48 +237,50 @@ export default () => {
               aktiv mitzugestalten.
             </p>
           </Fade>
-        </Title>
-        <ItemContainer>
-          <CardWrapper>
-            <Card>
-              <CardTitle>
-                <h1>Digitales</h1>
-                <p>
-                  Ich setze mich dafür ein, dass die Chancen, die durch
-                  Vernetzung, künstliche Intelligenz und breit verfügbarem
-                  Wissen allen zu Gute kommen.
-                </p>
-              </CardTitle>
-            </Card>
-          </CardWrapper>
-          <CardWrapper>
-            <Card>
-              <CardTitle>
-                <h1>Arbeit</h1>
-                <p>
-                  Ich setze mich dafür ein, dass alle der Arbeit&mdash;bezahlt
-                  und unbezahlt&mdash;nachgehen können, die ihnen ein Gefühl von
-                  Selbstwert, Gemeinschaft und Würde gibt, ihren Talenten
-                  entspricht und Freude bereitet. Dafür braucht es mit
-                  Autonomie, Selbstwirksamkeit und Sinnhaftigkeit die richtigen
-                  Umstände
-                </p>
-              </CardTitle>
-            </Card>
-          </CardWrapper>
-          <CardWrapper>
-            <Card>
-              <CardTitle>
-                <h1>Soziales</h1>
-                <p>
-                  Ich arbeite für eine sozial gerechte Gesellschaft, in der
-                  jeder Mensch teilhaben kann, vor Armut geschützt ist und
-                  selber über sein Leben bestimmen kann.
-                </p>
-              </CardTitle>
-            </Card>
-          </CardWrapper>
-        </ItemContainer>
+        </Text>
+        <div ref={nodeRef}>
+          <ItemContainer>
+            <CardWrapper>
+              <Card>
+                <CardTitle>
+                  <h2>Digitales</h2>
+                  <p>
+                    Ich setze mich dafür ein, dass die Chancen, die durch
+                    Vernetzung, künstliche Intelligenz und breit verfügbarem
+                    Wissen allen zu Gute kommen.
+                  </p>
+                </CardTitle>
+              </Card>
+            </CardWrapper>
+            <CardWrapper>
+              <Card>
+                <CardTitle>
+                  <h2>Arbeit</h2>
+                  <p>
+                    Ich setze mich dafür ein, dass alle der Arbeit&mdash;bezahlt
+                    und unbezahlt&mdash;nachgehen können, die ihnen ein Gefühl
+                    von Selbstwert, Gemeinschaft und Würde gibt, ihren Talenten
+                    entspricht und Freude bereitet. Dafür braucht es mit
+                    Autonomie, Selbstwirksamkeit und Sinnhaftigkeit die
+                    richtigen Umstände
+                  </p>
+                </CardTitle>
+              </Card>
+            </CardWrapper>
+            <CardWrapper>
+              <Card>
+                <CardTitle>
+                  <h2>Soziales</h2>
+                  <p>
+                    Ich arbeite für eine sozial gerechte Gesellschaft, in der
+                    jeder Mensch teilhaben kann, vor Armut geschützt ist und
+                    selber über sein Leben bestimmen kann.
+                  </p>
+                </CardTitle>
+              </Card>
+            </CardWrapper>
+          </ItemContainer>
+        </div>
         <Blog>
           <BlogText>
             <h2>

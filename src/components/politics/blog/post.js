@@ -4,12 +4,34 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   border-bottom: 2px solid #d0dbe3;
-  color: #fff;
 
   h2 {
     color: #d9b500;
     font-size: 24px;
     margin: 0;
+  }
+
+  p,
+  h3,
+  a,
+  a:after {
+    transition: all 0.3s ease;
+  }
+
+  body.dark & p {
+    color: #f6faf5;
+  }
+
+  body.dark & h3 {
+    color: #f6faf5;
+  }
+
+  body.dark & p > a {
+    color: #d9b500;
+  }
+
+  body.dark & p a::after {
+    background: #d9b500;
   }
 `
 

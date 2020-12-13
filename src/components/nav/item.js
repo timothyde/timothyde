@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-const Item = styled.a`
+const Item = styled(Link)`
   margin: 0 1rem;
   color: #092545;
   position: relative;
@@ -31,35 +32,15 @@ const Item = styled.a`
   }
 `
 
-export const NavItem = ({ itemName, children }) => {
-  const [anchorTarget, setAnchorTarget] = useState(null)
-
-  useEffect(() => {
-    setAnchorTarget(document.getElementById(itemName))
-  }, [itemName])
-
-  const handleClick = event => {
-    event.preventDefault()
-
-    const yOffset = -100
-    const y =
-      anchorTarget.getBoundingClientRect().top + window.pageYOffset + yOffset
-
-    window.scrollTo({ top: y, behavior: 'smooth' })
-  }
-
+export const NavItem = ({ to, children }) => {
   return (
-    <Item
-      href={`#${itemName}`}
-      onClick={handleClick}
-      ariaLabel={`Scroll to ${itemName}`}
-    >
+    <Item to={to} aria-label={`Gehe zu ${to}`}>
       {children}
     </Item>
   )
 }
 
-const MobileItem = styled.a`
+const MobileItem = styled(Link)`
   color: #fff;
   font-size: 55px;
   line-height: 65px;
@@ -71,30 +52,9 @@ const MobileItem = styled.a`
   font-family: 'Montserrat', sans-serif;
 `
 
-export const MobileNavItem = ({ itemName, children, handler }) => {
-  const [anchorTarget, setAnchorTarget] = useState(null)
-
-  useEffect(() => {
-    setAnchorTarget(document.getElementById(itemName))
-  }, [itemName])
-
-  const handleClick = event => {
-    event.preventDefault()
-    handler()
-
-    const yOffset = -100
-    const y =
-      anchorTarget.getBoundingClientRect().top + window.pageYOffset + yOffset
-
-    window.scrollTo({ top: y, behavior: 'smooth' })
-  }
-
+export const MobileNavItem = ({ to, children, handler }) => {
   return (
-    <MobileItem
-      href={`#${itemName}`}
-      onClick={handleClick}
-      ariaLabel={`Scroll to ${itemName}`}
-    >
+    <MobileItem to={to} aria-label={`Gehe zu ${to}`} onClick={handler}>
       {children}
     </MobileItem>
   )

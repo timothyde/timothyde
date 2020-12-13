@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-// import { useStaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 
 import Header from './header'
@@ -26,24 +25,21 @@ const Container = styled.div`
 `
 
 const Main = styled.main`
-  background: #fff;
   transition: all 0.4s ease;
-
-  &.dark {
-    background: #043634;
-  }
 `
 
-const Layout = ({ children, highlighted, pathname }) => {
+const Layout = ({ children }) => {
+  const highlighted = false
+
   return (
     <>
-      <Header pathname={pathname} />
+      <Header />
       <Main className={highlighted ? `dark` : ``}>{children}</Main>
       <Footer>
         <Container>
           <p>
             © {new Date().getFullYear()}, Timothy Krechel |{' '}
-            <Link to="/imprint/">Imprint</Link>
+            <Link to="/imprint/">Impressum</Link>
           </p>
         </Container>
       </Footer>

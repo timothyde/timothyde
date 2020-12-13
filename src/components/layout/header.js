@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import Burger from '../button/burger'
 import { Nav, MobileNav } from '../nav/nav'
 import Logo from '../nav/logo'
 
-let Head = styled.header`
+const Head = styled.header`
   position: fixed;
   top: 0px;
   max-height: 100px;
@@ -22,7 +22,7 @@ let Head = styled.header`
   }
 `
 
-let Container = styled.div`
+const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
   padding-left: 10px;
@@ -44,63 +44,26 @@ let Container = styled.div`
   }
 `
 
-export default class Header extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { open: false }
-  }
+export default () => {
+  const [solid, setSolid] = useState(false)
+  const [open, setOpen] = useState(false)
 
-  changeOpen() {
-    this.setState({ open: !this.state.open })
-  }
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.getWindowHeight.bind(this))
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.getWindowHeight.bind(this))
-  }
-
-  //then create the method
-  getWindowHeight() {
-    const distanceY = window.pageYOffset || document.documentElement.scrollTop
-    const shrinkOn = 200
-
-    if (distanceY > shrinkOn) {
-      this.setState({
-        solid: true,
-      })
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', () =>
+        setSolid(window.pageYOffset > 200)
+      )
     }
+  }, [])
 
-    if (distanceY < shrinkOn) {
-      this.setState({
-        solid: false,
-      })
-    }
-  }
-
-  render() {
-    const showNav = this.props.pathname === `/`
-    return (
-      <Head className={this.state.solid ? 'solid' : ''}>
-        {showNav && (
-          <MobileNav
-            open={this.state.open}
-            handler={this.changeOpen.bind(this)}
-          />
-        )}
-        <Container>
-          <Logo />
-          {showNav && <Nav />}
-          {showNav && (
-            <Burger
-              open={this.state.open}
-              handler={this.changeOpen.bind(this)}
-            />
-          )}
-        </Container>
-      </Head>
-    )
-  }
+  return (
+    <Head className={solid ? 'solid' : ''}>
+      <MobileNav open={open} handler={() => setOpen(!open)} />
+      <Container>
+        <Logo />
+        <Nav />
+        <Burger open={open} handler={() => setOpen(!open)} />
+      </Container>
+    </Head>
+  )
 }
