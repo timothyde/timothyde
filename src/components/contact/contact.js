@@ -110,7 +110,7 @@ export default () => (
             Nice!
           </Tada>
         </h2>
-        <SimpleButton href="mailto:hello@timothy.de" title="Email me!" />
+        <SimpleButton href="mailto:hello@timothy.de" title="Schreib mir!" />
         <p>
           Oder... du kannst mir auf{' '}
           <a

@@ -21,6 +21,7 @@ export const Nav = () => {
       <NavItem to={`/#politics`}>Politik</NavItem>
       <NavItem to={`/blog`}>Blog</NavItem>
       <NavItem to={`#contact`}>Kontakt</NavItem>
+      <NavItem to={`/leichte-sprache`}>Leichte Sprache</NavItem>
     </Navigation>
   )
 }
@@ -91,10 +92,13 @@ export const MobileNav = ({ open, handler }) => (
         Politik
       </MobileNavItem>
       <MobileNavItem to={`/blog`} handler={handler}>
-        Politik
+        Blog
       </MobileNavItem>
       <MobileNavItem to={`#contact`} handler={handler}>
         Kontakt
+      </MobileNavItem>
+      <MobileNavItem to={`/leichte-sprache`} handler={handler}>
+        Leichte Sprache
       </MobileNavItem>
     </Mobile>
   </>

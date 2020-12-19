@@ -42,8 +42,8 @@ export const NavItem = ({ to, children }) => {
 
 const MobileItem = styled(Link)`
   color: #fff;
-  font-size: 55px;
-  line-height: 65px;
+  font-size: 42px;
+  line-height: 55px;
 
   transition: transform 0.3s;
   transition-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
