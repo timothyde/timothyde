@@ -3,9 +3,11 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { useLocation } from '@reach/router'
 
-import Header from './header'
 import '../../styles/layout.css'
 import '../../styles/global.css'
+
+import Header from './header'
+import Social from './social'
 
 const Footer = styled.footer`
   background: #092545;
@@ -39,6 +41,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
+      <Social />
       <Main>{children}</Main>
       <Footer>
         <Container>
