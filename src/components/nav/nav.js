@@ -13,14 +13,17 @@ let Navigation = styled.nav`
   }
 `
 
-export const Nav = () => (
-  <Navigation>
-    <NavItem to={`#bio`}>Über Mich</NavItem>
-    <NavItem to={`#showcase`}>Projekte</NavItem>
-    <NavItem to={`#politics`}>Politik</NavItem>
-    <NavItem to={`#contact`}>Kontakt</NavItem>
-  </Navigation>
-)
+export const Nav = () => {
+  return (
+    <Navigation>
+      <NavItem to={`/#bio`}>Über Mich</NavItem>
+      <NavItem to={`/#showcase`}>Projekte</NavItem>
+      <NavItem to={`/#politics`}>Politik</NavItem>
+      <NavItem to={`/blog`}>Blog</NavItem>
+      <NavItem to={`#contact`}>Kontakt</NavItem>
+    </Navigation>
+  )
+}
 
 const Overlay = styled.div`
   position: fixed;
@@ -78,13 +81,16 @@ export const MobileNav = ({ open, handler }) => (
   <>
     <Overlay className={open ? `open` : ``} />
     <Mobile className={open ? `open` : ``}>
-      <MobileNavItem to={`#bio`} handler={handler}>
+      <MobileNavItem to={`/#bio`} handler={handler}>
         Über Mich
       </MobileNavItem>
-      <MobileNavItem to={`#showcase`} handler={handler}>
+      <MobileNavItem to={`/#showcase`} handler={handler}>
         Projekte
       </MobileNavItem>
-      <MobileNavItem to={`#politics`} handler={handler}>
+      <MobileNavItem to={`/#politics`} handler={handler}>
+        Politik
+      </MobileNavItem>
+      <MobileNavItem to={`/blog`} handler={handler}>
         Politik
       </MobileNavItem>
       <MobileNavItem to={`#contact`} handler={handler}>

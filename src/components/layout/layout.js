@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { useLocation } from '@reach/router'
 
 import Header from './header'
 import '../../styles/layout.css'
@@ -29,12 +29,17 @@ const Main = styled.main`
 `
 
 const Layout = ({ children }) => {
-  const highlighted = false
+  const location = useLocation()
+
+  useEffect(() => {
+    const body = document.body
+    body.classList.toggle('dark', location === '/')
+  }, [location])
 
   return (
     <>
       <Header />
-      <Main className={highlighted ? `dark` : ``}>{children}</Main>
+      <Main>{children}</Main>
       <Footer>
         <Container>
           <p>
@@ -45,10 +50,6 @@ const Layout = ({ children }) => {
       </Footer>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

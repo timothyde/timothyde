@@ -91,15 +91,12 @@ export default () => {
         <Title>
           <h1>Blog</h1>
           <p>
-            Adipisicing veniam ipsum ad mollit duis occaecat ea ex consectetur
-            et. Tempor minim cillum veniam voluptate reprehenderit eu voluptate.
-            Veniam eiusmod exercitation ea dolore deserunt mollit aute fugiat ad
-            culpa veniam quis esse. Ut aute labore reprehenderit tempor velit
-            dolore commodo do adipisicing et incididunt ea esse. Veniam labore
-            excepteur dolor id nisi amet.
+            In völlig unregelmäßigen Abständen inspirieren mich ein gutes (oder
+            ein ganz schlechtes!) Buch oder ein interessantes Gespräch dazu, ein
+            paar Gedanken aufzuschreiben.
           </p>
         </Title>
-        <h2>Aktuelle Blog-Einträge</h2>
+        <h2>Aktuelle Posts</h2>
         {data.posts.nodes.map(({ uid, first_publication_date, data }, i) => (
           <Post
             key={i}
