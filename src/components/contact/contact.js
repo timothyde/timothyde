@@ -127,7 +127,7 @@ export default () => (
             target="_blank"
           >
             Twitter
-          </a>
+          </a>{' '}
           folgen. Cheers!
         </p>
       </Text>

@@ -166,7 +166,7 @@ export default () => {
             </p>
           </Fade>
           <Fade bottom delay={200} distance="100px">
-            <Button itemName="bio" title="Scroll down" />
+            <Button itemName="bio" title="Runterscrollen" />
           </Fade>
         </Text>
         <ImageContainer>
