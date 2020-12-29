@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
+  margin-bottom: 24px;
   border-bottom: 2px solid #d0dbe3;
 
   h2 {

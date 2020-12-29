@@ -8,6 +8,7 @@ moment.locale('de')
 
 const Wrapper = styled.div`
   border-bottom: 2px solid #d0dbe3;
+  margin-bottom: 24px;
   color: #092545;
 
   h2 {

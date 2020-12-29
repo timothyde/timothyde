@@ -27,7 +27,8 @@
     "react-helmet": "^5.2.1",
     "react-is-visible": "^1.1.1",
     "react-reveal": "^1.2.2",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "typeface-neuton": "^1.1.13"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

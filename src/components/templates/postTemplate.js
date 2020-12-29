@@ -53,7 +53,7 @@ const Meta = styled.div`
 
 const Author = styled.div``
 
-const Text = styled.div`
+const Post = styled.div`
   width: 100%;
 
   h1 {
@@ -139,6 +139,15 @@ const Subtitle = styled.h3`
   }
 `
 
+const Text = styled.div`
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 400px;
+  }
+`
+
 const PostLayout = ({ location, pageContext }) => {
   return (
     <Layout pathname={location.pathname}>
@@ -153,19 +162,23 @@ const PostLayout = ({ location, pageContext }) => {
               .format('DD. MMMM YYYY')}
           </Author>
         </Meta>
-        <Text>
+        <Post>
           <h1>{pageContext.data.title.text}</h1>
           <Subtitle>{pageContext.data.subtitle.text}</Subtitle>
           <img
             src={pageContext.data.image.url}
             alt={pageContext.data.image.alt}
           />
-          <div
+          <Text
             dangerouslySetInnerHTML={{
               __html: pageContext.data.text.html,
             }}
           />
-        </Text>
+        </Post>
+        <Meta>
+          <Link to="/">&larr; Zurück</Link>
+          <Author>geschrieben von Timothy</Author>
+        </Meta>
       </Container>
       <Contact />
     </Layout>
