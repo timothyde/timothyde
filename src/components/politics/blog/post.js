@@ -12,6 +12,10 @@ const Wrapper = styled.div`
     margin: 0;
   }
 
+  h3 {
+    font-style: italic;
+  }
+
   p,
   h3,
   a,

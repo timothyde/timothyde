@@ -34,6 +34,10 @@ const Head = styled.div`
 const Title = styled.div`
   width: 100%;
 
+  h3 {
+    font-style: italic;
+  }
+
   @media (min-width: 768px) {
     width: 50%;
   }

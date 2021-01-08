@@ -31,6 +31,10 @@ const Container = styled.div`
 const Meta = styled.div`
   display: flex;
   justify-content: space-between;
+  flex: wrap;
+  text-align: center;
+
+  padding: 0 16px;
 
   a {
     color: #2d6ae3;
@@ -129,6 +133,7 @@ const Subtitle = styled.h3`
   color: #092545;
   display: inline-block;
   margin-bottom: 40px;
+  font-style: italic;
 
   line-height: 24px;
   font-size: 24px;
@@ -154,7 +159,7 @@ const PostLayout = ({ location, pageContext }) => {
       <SEO title={pageContext.data.title.text} />
       <Container>
         <Meta>
-          <Link to="/">&larr; Zurück</Link>
+          <Link to={'/blog'}>&larr; Zurück</Link>
           <Author>
             Veröffentlicht am{' '}
             {moment(pageContext.first_publication_date)

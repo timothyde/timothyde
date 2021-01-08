@@ -25,7 +25,7 @@ export const Title = styled.div`
     padding: 20px 0px 10px 0px;
     letter-spacing: -2px;
 
-    line-height: 45px;
+    line-height: 50px;
     font-size: 60px;
     transition: all 0.3s ease;
 
