@@ -156,7 +156,10 @@ const Text = styled.div`
 const PostLayout = ({ location, pageContext }) => {
   return (
     <Layout pathname={location.pathname}>
-      <SEO title={pageContext.data.title.text} />
+      <SEO
+        title={pageContext.data.title.text}
+        description={pageContext.data.teaser.text}
+      />
       <Container>
         <Meta>
           <Link to={'/blog'}>&larr; Zurück</Link>

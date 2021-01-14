@@ -144,24 +144,25 @@ export default () => {
         <Text>
           <Fade bottom distance="100px">
             <h1>
-              Tech Enthusiast,
+              Tech-Enthusiast,
               <br />
-              Music Affine,
+              Musik-Nerd,
               <br />
-              Great At Googling
+              Gut im Googlen
             </h1>
           </Fade>
           <Fade bottom delay={100} distance="100px">
             <p>
-              Hi! Ich bin Timothy und arbeite derzeit als Technology Consultant{' '}
+              Hi! Ich bin Timothy und helfe{' '}
               <a
                 href="https://tarent.de"
                 rel="noopener noreferrer"
                 target="_blank"
               >
                 @tarent
-              </a>
-              . Du hast ein spannendes Projekt und suchst Unterstützung? Cool,{' '}
+              </a>{' '}
+              Innovatoren bei der Umsetzung ihrer Ideen. Du hast ein spannendes
+              Projekt und suchst Unterstützung? Cool,{' '}
               <a href="mailto:hello@timothy.de">schreib mir</a>!
             </p>
           </Fade>

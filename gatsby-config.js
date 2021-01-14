@@ -3,8 +3,10 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: `Timothy.de`,
-    description: `Hi there! I am Timothy, currently working as a technology consultant at tarent.`,
-    author: `timothyde`,
+    description: `Hi! Ich bin Timothy und arbeite derzeit als Technology Consultant bei tarent.`,
+    author: `Timothy Krechel`,
+    siteUrl: `https://timothy.de`,
+    keywords: [`Timothy`, `Krechel`],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
