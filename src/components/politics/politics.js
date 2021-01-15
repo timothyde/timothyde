@@ -167,8 +167,8 @@ export default () => {
               ermöglichen; sei es durch ein faireres Steuersystem, eine
               Abschaffung der Sanktionspolitik im Sozialsystem oder ein
               bedingungsloses Grundeinkommen. Ich möchte einen Beitrag dazu
-              leisten und deswegen ist es mein langfristiges Ziel, Bundespolitik
-              aktiv mitzugestalten.
+              leisten und deswegen ist es mein Ziel, den gesellschaftlichen
+              Diskurs aktiv mitzugestalten.
             </p>
           </Fade>
         </Text>
@@ -196,7 +196,7 @@ export default () => {
                     von Selbstwert, Gemeinschaft und Würde gibt, ihren Talenten
                     entspricht und Freude bereitet. Dafür braucht es mit
                     Autonomie, Selbstwirksamkeit und Sinnhaftigkeit die
-                    richtigen Umstände
+                    richtigen Umstände.
                   </p>
                 </CardTitle>
               </Card>

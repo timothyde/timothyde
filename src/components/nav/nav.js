@@ -17,7 +17,7 @@ export const Nav = () => {
   return (
     <Navigation>
       <NavItem to={`/#bio`}>Über Mich</NavItem>
-      <NavItem to={`/#showcase`}>Projekte</NavItem>
+      <NavItem to={`/#showcase`}>Code &amp; Co.</NavItem>
       <NavItem to={`/#politics`}>Politik</NavItem>
       <NavItem to={`/blog`}>Blog</NavItem>
       <NavItem to={`#contact`}>Kontakt</NavItem>
@@ -86,7 +86,7 @@ export const MobileNav = ({ open, handler }) => (
         Über Mich
       </MobileNavItem>
       <MobileNavItem to={`/#showcase`} handler={handler}>
-        Projekte
+        Code &amp; Co.
       </MobileNavItem>
       <MobileNavItem to={`/#politics`} handler={handler}>
         Politik

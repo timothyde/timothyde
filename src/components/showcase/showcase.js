@@ -98,9 +98,9 @@ export default () => {
         <Fade bottom distance="50px">
           <Title>
             <h1>
-              Proj-
+              Code
               <br />
-              ekte
+              &amp; Co.
             </h1>
           </Title>
         </Fade>
