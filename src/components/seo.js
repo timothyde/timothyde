@@ -30,10 +30,10 @@ function SEO({ description, lang, meta, title, image }) {
   )
 
   const metaDescription = description || data.site.siteMetadata.description
-  const metaImage = image
-    ? image.childImageSharp.resize
-    : data.image.childImageSharp.resize
-  const imageString = `${data.site.siteMetadata.siteUrl}${metaImage.src}`
+  const metaImage = data.image.childImageSharp.resize
+  const imageString = image
+    ? image
+    : `${data.site.siteMetadata.siteUrl}${metaImage.src}`
 
   return (
     <Helmet

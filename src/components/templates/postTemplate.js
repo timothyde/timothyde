@@ -159,6 +159,7 @@ const PostLayout = ({ location, pageContext }) => {
       <SEO
         title={pageContext.data.title.text}
         description={pageContext.data.teaser.text}
+        image={pageContext.data.image.url}
       />
       <Container>
         <Meta>
