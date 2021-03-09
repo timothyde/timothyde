@@ -161,8 +161,8 @@ export default () => {
               >
                 @tarent
               </a>{' '}
-              Innovatoren bei der Umsetzung ihrer Ideen. Du hast ein spannendes
-              Projekt und suchst Unterstützung? Cool,{' '}
+              innovativen Köpfen bei der Umsetzung ihrer Ideen. Du hast ein
+              spannendes Projekt und suchst Unterstützung? Cool,{' '}
               <a href="mailto:hello@timothy.de">schreib mir</a>!
             </p>
           </Fade>
