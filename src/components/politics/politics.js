@@ -181,7 +181,7 @@ export default () => {
                   <p>
                     Ich setze mich dafür ein, dass die Chancen, die durch
                     Vernetzung, künstliche Intelligenz und breit verfügbarem
-                    Wissen allen zu Gute kommen.
+                    Wissen entstehen, allen zu Gute kommen.
                   </p>
                 </CardTitle>
               </Card>

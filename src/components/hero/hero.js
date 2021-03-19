@@ -163,7 +163,7 @@ export default () => {
               </a>{' '}
               innovativen Köpfen bei der Umsetzung ihrer Ideen. Du hast ein
               spannendes Projekt und suchst Unterstützung? Cool,{' '}
-              <a href="mailto:hello@timothy.de">schreib mir</a>!
+              <a href="mailto:hello@timothy.de">schreib mir</a>
             </p>
           </Fade>
           <Fade bottom delay={200} distance="100px">
