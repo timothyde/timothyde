@@ -7,6 +7,7 @@ import styled from 'styled-components'
 import Layout from '../layout/layout'
 import SEO from '../seo'
 import Contact from '../contact/contact'
+import logo from '../../images/signature.svg'
 
 moment.locale('de')
 
@@ -154,12 +155,41 @@ const Text = styled.div`
 `
 
 const PostLayout = ({ location, pageContext }) => {
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://timothy.de/blog/${location.pathname}`
+    },
+    "headline": pageContext.data.title.text,
+    "description": pageContext.data.teaser.text,
+    "image": [
+      pageContext.data.image.url
+    ],  
+    "author": {
+      "@type": "Person",
+      "name": "Timothy Krechel"
+    },  
+    "publisher": {
+      "@type": "Organization",
+      "name": "timothy.de",
+      "logo": {
+        "@type": "ImageObject",
+        "url": logo
+      }
+    },
+    "datePublished": pageContext.first_publication_date
+  }
+
   return (
     <Layout pathname={location.pathname}>
       <SEO
         title={pageContext.data.title.text}
         description={pageContext.data.teaser.text}
         image={pageContext.data.image.url}
+        schemaMarkup={schema}
       />
       <Container>
         <Meta>
