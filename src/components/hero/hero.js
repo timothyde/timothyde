@@ -153,13 +153,13 @@ export default () => {
           </Fade>
           <Fade bottom delay={100} distance="100px">
             <p>
-              Hi! Ich bin Timothy und helfe{' '}
+              Hi! Ich bin Timothy und helfe als Teil von{' '}
               <a
                 href="https://tarent.de"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                @tarent
+                tarent
               </a>{' '}
               innovativen Köpfen bei der Umsetzung ihrer Ideen. Du hast ein
               spannendes Projekt und suchst Unterstützung? Cool,{' '}
