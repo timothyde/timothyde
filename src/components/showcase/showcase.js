@@ -5,6 +5,7 @@ import Fade from 'react-reveal/Fade'
 
 import { Container, Title, Text as T } from '../layout/container'
 import Item from './item/item'
+import Publication from './publications/publication'
 
 let Showcase = styled.div`
   position: relative;
@@ -36,6 +37,30 @@ let Text = styled(T)`
   }
 `
 
+const Publications = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
+
+const PublicationText = styled(T)`
+  padding: 0 1rem;
+  text-align: left;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    margin-top: 4rem;
+  }
+`
+
+const PublicationItems = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 2rem 2rem;
+  width: 100%;
+`
+
 export default () => {
   const data = useStaticQuery(graphql`
     query ShowcaseQuery {
@@ -57,6 +82,27 @@ export default () => {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      publications: allPrismicPublication(
+        sort: { fields: first_publication_date, order: ASC }
+      ) {
+        nodes {
+          data {
+            date
+            description {
+              text
+            }
+            url {
+              url
+            }
+            title {
+              text
+            }
+            location {
+              text
+            }
           }
         }
       }
@@ -120,6 +166,25 @@ export default () => {
             </p>
           </Text>
         </ItemContainer>
+        <Publications>
+          <PublicationText>
+            <h2>
+              <span>Talks</span>
+              <br />
+              &amp; Veröffentlichungen
+            </h2>
+            <p>
+              Reger Austausch über neue Technologien, das Teilen von Learnings
+              und Impulse geben macht mir Spaß. Deswegen versuche ich, wann
+              immer ein Bisschen Zeit übrig ist, etwas Wissen weiterzugeben.
+            </p>
+          </PublicationText>
+          <PublicationItems>
+            {data.publications.nodes.map(({ data }, i) => (
+              <Publication key={i} {...data} />
+            ))}
+          </PublicationItems>
+        </Publications>
       </Container>
     </Showcase>
   )
