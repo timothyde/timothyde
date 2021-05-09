@@ -151,3 +151,9 @@ export const LinkButton = ({ title, to }) => (
 export const SimpleButton = ({ href, title }) => {
   return <Button href={href} ariaLabel={`Go to ${href}`} title={title}></Button>
 }
+
+export const HandlerButton = ({ handler, title }) => {
+  return (
+    <Button onClick={() => handler()} ariaLabel={title} title={title}></Button>
+  )
+}

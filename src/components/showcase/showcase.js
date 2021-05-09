@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
 
 import { Container, Title, Text as T } from '../layout/container'
+import { HandlerButton } from '../button/button'
 import Item from './item/item'
 import Publication from './publications/publication'
 
@@ -59,6 +60,8 @@ const PublicationItems = styled.div`
 
   padding: 2rem 2rem;
   width: 100%;
+
+  transition: height 500ms ease-in-out;
 `
 
 export default () => {
@@ -138,6 +141,8 @@ export default () => {
     },
   ]
 
+  const [collapsed, setCollapsed] = useState(true)
+
   return (
     <Showcase id="showcase">
       <Container>
@@ -180,9 +185,17 @@ export default () => {
             </p>
           </PublicationText>
           <PublicationItems>
-            {data.publications.nodes.map(({ data }, i) => (
-              <Publication key={i} {...data} />
-            ))}
+            {data.publications.nodes
+              .slice(0, collapsed ? 3 : 99)
+              .map(({ data }, i) => (
+                <Fade bottom distance="50px">
+                  <Publication key={i} {...data} />
+                </Fade>
+              ))}
+            <HandlerButton
+              title={collapsed ? 'Mehr' : 'Weniger'}
+              handler={() => setCollapsed(v => !v)}
+            />
           </PublicationItems>
         </Publications>
       </Container>
