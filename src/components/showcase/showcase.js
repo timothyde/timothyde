@@ -116,7 +116,7 @@ export default () => {
     {
       customer: 'eindruckhochzwei',
       title: 'Abo Adieu',
-      description: 'iOS-Entwicklung',
+      description: 'iOS Development',
       url: 'https://apps.apple.com/de/app/abo-adieu/id1079361985',
       color: '#ff6021',
       fluid: data.aboadieu.childImageSharp.fluid,
@@ -124,7 +124,7 @@ export default () => {
     {
       customer: 'Liquid Force',
       title: '4D Form ',
-      description: '3D-Animation',
+      description: '3D Animation',
       url: 'https://vimeo.com/193990616',
       color: '#7e42e1',
       fluid: data.lf4d.childImageSharp.fluid,
@@ -133,7 +133,7 @@ export default () => {
     {
       customer: 'Kartenhaus Software',
       title: 'Captain Immo',
-      description: 'Webentwicklung',
+      description: 'Web Development',
       url:
         'https://www.general-anzeiger-bonn.de/news/wirtschaft/regional/bonner-start-up-captain-immo-geht-online_aid-43676339',
       color: '#7e42e1',
@@ -149,7 +149,7 @@ export default () => {
         <Fade bottom distance="50px">
           <Title>
             <h1>
-              Code
+              Show
               <br />
               &amp; Co.
             </h1>
@@ -161,13 +161,13 @@ export default () => {
           ))}
           <Text>
             <h2>
-              Es gibt noch mehr, aber
-              <br /> das sind meine Lieblinge
+              There's more, but
+              <br /> these are my favorites
             </h2>
             <p>
-              Über die Jahre war ich Teil von einer ganzen Reihe
-              unterschiedlicher Projekte: Printdesign, 2D- und 3D-Animation,
-              Webentwicklung und die Entwicklung mobiler Apps.
+              Over the last few years, I've been part of a pretty wide range of
+              projects - covering print design, both 2D and 3D animation, web
+              development as well as native app development.
             </p>
           </Text>
         </ItemContainer>
@@ -176,12 +176,13 @@ export default () => {
             <h2>
               <span>Talks</span>
               <br />
-              &amp; Veröffentlichungen
+              &amp; Publications
             </h2>
             <p>
-              Reger Austausch über neue Technologien, das Teilen von Learnings
-              und Impulse geben macht mir Spaß. Deswegen versuche ich, wann
-              immer ein Bisschen Zeit übrig ist, etwas Wissen weiterzugeben.
+              Sharing my learnings and insights not only sharpens my thoughts,
+              but is also fun. That's why I try to pass on some knowledge I try
+              to pass on some knowledge whenever I have a bit of time left.
+              (Beware! Mixed language content!)
             </p>
           </PublicationText>
           <PublicationItems>
@@ -193,7 +194,7 @@ export default () => {
                 </Fade>
               ))}
             <HandlerButton
-              title={collapsed ? 'Mehr' : 'Weniger'}
+              title={collapsed ? 'More' : 'Less'}
               handler={() => setCollapsed(v => !v)}
             />
           </PublicationItems>

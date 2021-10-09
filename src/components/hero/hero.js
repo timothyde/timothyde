@@ -144,30 +144,23 @@ export default () => {
         <Text>
           <Fade bottom distance="100px">
             <h1>
-              Tech-Enthusiast,
+              Tech Enthusiast,
               <br />
-              Musik-Nerd,
+              Music Afficionado,
               <br />
-              Gut im Googlen
+              Great at Googling
             </h1>
           </Fade>
           <Fade bottom delay={100} distance="100px">
             <p>
-              Hi! Ich bin Timothy und helfe als Teil von{' '}
-              <a
-                href="https://tarent.de"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                tarent
-              </a>{' '}
-              innovativen Köpfen bei der Umsetzung ihrer Ideen. Du hast ein
-              spannendes Projekt und suchst Unterstützung? Cool,{' '}
-              <a href="mailto:hello@timothy.de">schreib mir</a>
+              Hi there! I am Timothy, currently helping creative minds transform
+              their ideas and visions into successful products. Have a fun
+              project to collab on? Awesome,{' '}
+              <a href="mailto:hello@timothy.de">hit me up</a>!
             </p>
           </Fade>
           <Fade bottom delay={200} distance="100px">
-            <Button itemName="bio" title="Runterscrollen" />
+            <Button itemName="bio" title="Scroll Down" />
           </Fade>
         </Text>
         <ImageContainer>

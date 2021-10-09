@@ -97,38 +97,30 @@ export default () => (
       <Title>
         <Fade bottom distance="50px">
           <h1>
-            Kon-
+            Con-
             <br />
-            takt
+            tact
           </h1>
         </Fade>
       </Title>
       <Text>
         <h2>
-          <span>Du möchtest Kontakt halten?</span>{' '}
+          <span>Want to connect?</span>{' '}
           <Tada forever={true} timeout={3000}>
-            Nice!
+            Awesome!
           </Tada>
         </h2>
         <SimpleButton href="mailto:hello@timothy.de" title="Schreib mir!" />
         <p>
-          Oder... du kannst mir auf{' '}
+          Or... you can add me on{' '}
           <a
             href="https://www.linkedin.com/in/timothyde/"
             rel="noopener noreferrer"
             target="_blank"
           >
             LinkedIn
-          </a>{' '}
-          oder{' '}
-          <a
-            href="https://twitter.com/timothy__de"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Twitter
-          </a>{' '}
-          folgen. Cheers!
+          </a>
+          . Cheers!
         </p>
       </Text>
     </Container>

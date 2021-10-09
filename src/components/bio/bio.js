@@ -60,46 +60,44 @@ export default () => (
       <Title>
         <Fade bottom distance="50px">
           <h1>
-            Über
+            Bio-
             <br />
-            mich
+            Graphy
           </h1>
         </Fade>
       </Title>
       <Text>
         <Fade bottom distance="50px">
           <h2>
-            <span>Eigentlich bin ich</span>
+            <span>Actually, I'm just</span>
             <br />
-            nur ziemlich neugierig.
+            pretty damn curious.
           </h2>
           <p>
-            Etwas Neues zu entdecken ist meine große Leidenschaft - egal, ob es
-            ein ganz unbekanntes Album von Van Halen, eine geniale
-            JavaScript-Library oder das Lieblingsbuch eines Freundes ist. Ich
-            schätze es sehr, wenn Leute ihre Geschichten, Geschmäcker und
-            Erfahrungen mit mir teilen und mir die Gelegenheit geben, daran zu
-            wachsen. Denn am Ende ist persönliches Wachstum für mich eine große
-            sinngebende Komponente. Ein breites Skillset zu entwickeln hat sich
-            als sehr wertvoll für meine berufliche Laufbahn erwiesen und erlaubt
-            es, ein Problem aus verschiedenen Blickwinkeln zu betrachten und
-            ganzheitlichere Lösungen zu finden. In diesem Sinne:
-            <br /> Happy Learning!
+            Exploring things is my major passion. Whether it's a hardly known
+            music album by Van Halen, an awesome new JavaScript library or a
+            friend's favorite book. I greatly value listening to people who
+            share their tales, tastes and experiences as a great way of growing
+            - and in the in the end, growth is what makes life meaningful to me.
+            Building a skill-set that covers a wide range of fields and metiers
+            has proven invaluable in founding a business or two and allows
+            viewing a problem from different angles to come up with a suitable
+            solution.
+            <br /> Keep on learning!
           </p>
-          <h2>Bis dann,</h2>
+          <h2>Love,</h2>
           <Signature src={signature} />
         </Fade>
       </Text>
       <Vita>
         <VitaText>
           <h2>
-            <span>Ein Schritt</span>
+            <span>One step</span>
             <br />
-            nach dem Anderen.
+            at a time.
           </h2>
           <p>
-            Das hier sind die aktuellsten Schritte meines Berufslebens. Eine
-            vollständige Übersicht gibt's auf meinem{' '}
+            These are the most recent footprints of my professional life. See my
             <a
               href="https://www.linkedin.com/in/timothyde/"
               rel="noopener noreferrer"
@@ -107,7 +105,7 @@ export default () => (
             >
               LinkedIn
             </a>
-            -Profil.
+            profile for a more complete list.
           </p>
         </VitaText>
         <VitaItems>

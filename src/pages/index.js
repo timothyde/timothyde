@@ -5,7 +5,6 @@ import SEO from '../components/seo'
 import Hero from '../components/hero/hero'
 import Bio from '../components/bio/bio'
 import Showcase from '../components/showcase/showcase'
-import Politics from '../components/politics/politics'
 import Contact from '../components/contact/contact'
 
 export default () => {
@@ -15,7 +14,6 @@ export default () => {
       <Hero />
       <Bio />
       <Showcase />
-      <Politics />
       <Contact />
     </Layout>
   )

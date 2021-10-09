@@ -16,12 +16,10 @@ let Navigation = styled.nav`
 export const Nav = () => {
   return (
     <Navigation>
-      <NavItem to={`/#bio`}>Über Mich</NavItem>
+      <NavItem to={`/#bio`}>Biography</NavItem>
       <NavItem to={`/#showcase`}>Code &amp; Co.</NavItem>
-      <NavItem to={`/#politics`}>Politik</NavItem>
       <NavItem to={`/blog`}>Blog</NavItem>
-      <NavItem to={`#contact`}>Kontakt</NavItem>
-      <NavItem to={`/leichte-sprache`}>Leichte Sprache</NavItem>
+      <NavItem to={`#contact`}>Contact</NavItem>
     </Navigation>
   )
 }
@@ -83,22 +81,16 @@ export const MobileNav = ({ open, handler }) => (
     <Overlay className={open ? `open` : ``} />
     <Mobile className={open ? `open` : ``}>
       <MobileNavItem to={`/#bio`} handler={handler}>
-        Über Mich
+        Biography
       </MobileNavItem>
       <MobileNavItem to={`/#showcase`} handler={handler}>
         Code &amp; Co.
-      </MobileNavItem>
-      <MobileNavItem to={`/#politics`} handler={handler}>
-        Politik
       </MobileNavItem>
       <MobileNavItem to={`/blog`} handler={handler}>
         Blog
       </MobileNavItem>
       <MobileNavItem to={`#contact`} handler={handler}>
-        Kontakt
-      </MobileNavItem>
-      <MobileNavItem to={`/leichte-sprache`} handler={handler}>
-        Leichte Sprache
+        Contact
       </MobileNavItem>
     </Mobile>
   </>

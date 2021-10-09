@@ -53,7 +53,7 @@ export default ({ title, location, description, url, date }) => {
         </h3>
         <p>{description[0].text}</p>
         <p>
-          <Link to={url.url}>Mehr</Link>
+          <Link to={url.url}>View</Link>
         </p>
       </div>
     </Wrapper>
