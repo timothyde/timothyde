@@ -65,6 +65,7 @@ export default () => {
     query BlogQuery {
       posts: allPrismicBlogPost(
         sort: { fields: first_publication_date, order: DESC }
+        filter: { tags: { eq: "innovation" } }
       ) {
         nodes {
           data {
@@ -80,6 +81,7 @@ export default () => {
           }
           first_publication_date
           uid
+          tags
         }
       }
     }
@@ -91,12 +93,11 @@ export default () => {
         <Title>
           <h1>Blog</h1>
           <p>
-            In völlig unregelmäßigen Abständen inspirieren mich ein gutes (oder
-            ein ganz schlechtes!) Buch oder ein interessantes Gespräch dazu, ein
-            paar Gedanken aufzuschreiben.
+            With this blog, I am trying to periodically share my insights
+            regarding tech and products.
           </p>
         </Title>
-        <h2>Aktuelle Posts</h2>
+        <h2>Latest Posts</h2>
         {data.posts.nodes.map(({ uid, first_publication_date, data }, i) => (
           <Post
             key={i}

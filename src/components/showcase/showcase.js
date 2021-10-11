@@ -149,7 +149,7 @@ export default () => {
         <Fade bottom distance="50px">
           <Title>
             <h1>
-              Show
+              Code
               <br />
               &amp; Co.
             </h1>

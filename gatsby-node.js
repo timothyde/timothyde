@@ -6,7 +6,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Query all Pages with their IDs and template data.
   const pages = await graphql(`
     query PostsQuery {
-      posts: allPrismicBlogPost {
+      posts: allPrismicBlogPost(filter: { tags: { eq: "innovation" } }) {
         nodes {
           data {
             teaser {

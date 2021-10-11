@@ -19,7 +19,6 @@ const Wrapper = styled.div`
     display: inline-block;
     -webkit-background-clip: text;
     background-clip: text;
-    text-indent: -3px;
     letter-spacing: -2px;
   }
 `
@@ -27,8 +26,6 @@ const Wrapper = styled.div`
 const Head = styled.div`
   display: flex;
   flex-wrap: wrap;
-
-  margin-bottom: 24px;
 `
 
 const Title = styled.div`
@@ -39,7 +36,7 @@ const Title = styled.div`
   }
 
   @media (min-width: 768px) {
-    width: 50%;
+    width: 70%;
   }
 `
 
@@ -49,7 +46,7 @@ const Meta = styled.div`
   width: 100%;
 
   @media (min-width: 768px) {
-    width: 50%;
+    width: 30%;
     text-align: right;
   }
 `
@@ -63,9 +60,9 @@ export default ({ uid, first_publication_date, subtitle, teaser, title }) => (
           <h3>{subtitle.text}</h3>
         </Title>
         <Meta>
-          Veröffentlicht am{' '}
+          Published on{' '}
           {moment(first_publication_date)
-            .locale('de')
+            .locale('en')
             .format('DD. MMMM YYYY')}
         </Meta>
       </Head>
