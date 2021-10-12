@@ -230,8 +230,8 @@ const PostLayout = ({ location, pageContext }) => {
           />
         </Post>
         <Meta>
-          <Link to="/">&larr; Zurück</Link>
-          <Author>geschrieben von Timothy</Author>
+          <Link to="/">&larr; Back</Link>
+          <Author>written by Timothy</Author>
         </Meta>
       </Container>
       <Contact />
