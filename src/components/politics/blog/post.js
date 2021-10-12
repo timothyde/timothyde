@@ -47,7 +47,7 @@ export default ({ uid, subtitle, teaser, title }) => (
       <h3>{subtitle.text}</h3>
       <p>{teaser.text}</p>
       <p>
-        <Link to={`/blog/${uid}`}>Zum Post</Link>
+        <Link to={`/blog/${uid}`}>Go To Post</Link>
       </p>
     </div>
   </Wrapper>

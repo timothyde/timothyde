@@ -97,14 +97,14 @@ export default () => (
             at a time.
           </h2>
           <p>
-            These are the most recent footprints of my professional life. See my
+            These are the most recent footprints of my professional life. See my{' '}
             <a
               href="https://www.linkedin.com/in/timothyde/"
               rel="noopener noreferrer"
               target="_blank"
             >
               LinkedIn
-            </a>
+            </a>{' '}
             profile for a more complete list.
           </p>
         </VitaText>
