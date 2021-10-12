@@ -7,7 +7,6 @@ import '../../styles/layout.css'
 import '../../styles/global.css'
 
 import Header from './header'
-import Social from './social'
 
 const Footer = styled.footer`
   background: #092545;
@@ -41,7 +40,6 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <Social />
       <Main>{children}</Main>
       <Footer>
         <Container>

@@ -63,7 +63,7 @@ export default ({ uid, first_publication_date, subtitle, teaser, title }) => (
           Published on{' '}
           {moment(first_publication_date)
             .locale('en')
-            .format('DD. MMMM YYYY')}
+            .format('MMMM Do YYYY')}
         </Meta>
       </Head>
       <p>{teaser.text}</p>
